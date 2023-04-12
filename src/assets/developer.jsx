@@ -1,3 +1,5 @@
+import { BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs'
+
 export const developer = [
   {
     name: 'Excel Nwachukwu ',
@@ -90,17 +92,20 @@ export const developer = [
               title: 'Github profile',
               url: ' https://github.com/trillionclues ',
               user: 'trillionclues',
+              icon: <BsGithub />,
             },
 
             twitter: {
               title: 'Twitter profile',
               url: ' https://twitter.com/trillionclues ',
+              icon: <BsTwitter />,
               user: 'trillionclues',
             },
 
             linkedin: {
               title: 'LinkedIn profile',
               url: ' https://www.linkedin.com/in/trillionclues-excel/ ',
+              icon: <BsLinkedin />,
             },
           },
         ],
