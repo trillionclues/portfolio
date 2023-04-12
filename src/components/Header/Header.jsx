@@ -24,7 +24,7 @@ const Header = () => {
                 <NavLink to='/projects'>_projects</NavLink>
               </li>
               <li className='no-underline border-r border-r-outline py-3 px-5 cursor-pointer hover:text-slate-200'>
-                <NavLink to='/articles'>_article</NavLink>
+                <NavLink to='/articles'>_articles</NavLink>
               </li>
             </ul>
 

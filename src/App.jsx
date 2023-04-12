@@ -1,21 +1,29 @@
-import React from 'react'
-import Home from '././pages/Home/Home'
-import About from '././pages/About/About'
-import Contact from '././pages/Contact/Contact'
-import Projects from '././pages/Projects/Projects'
+import { lazy, Suspense } from 'react'
+const Home = lazy(() => import('././pages/Home/Home'))
+const About = lazy(() => import('././pages/About/About'))
+const Contact = lazy(() => import('././pages/Contact/Contact'))
+const Projects = lazy(() => import('././pages/Projects/Projects'))
+const NoMatch = lazy(() => import('./components/NoMatch'))
+const Hero = lazy(() => import('././components/Hero/Hero'))
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path='/' exact element={<Home />} />
-          <Route path='/about-me' element={<About />} />
-          <Route path='/contact-me' element={<Contact />} />
-          <Route path='/projects' element={<Projects />} />
-        </Routes>
-      </Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Router>
+          <Home>
+            <Routes>
+              <Route exact path='/' element={<Hero />} />
+              <Route exact path='/about-me' element={<About />} />
+              <Route exact path='/contact-me' element={<Contact />} />
+              <Route exact path='/projects' element={<Projects />} />
+              <Route exact path='*' element={<NoMatch />} />
+            </Routes>
+          </Home>
+        </Router>
+      </Suspense>
     </div>
   )
 }
