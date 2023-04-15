@@ -21,6 +21,14 @@ export default {
         span4: '#E5E9F0',
       },
     },
+
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
   },
   plugins: [],
 }

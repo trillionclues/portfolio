@@ -1,12 +1,11 @@
 import { lazy, Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 const Home = lazy(() => import('././pages/Home/Home'))
 const About = lazy(() => import('././pages/About/About'))
 const Contact = lazy(() => import('././pages/Contact/Contact'))
 const Projects = lazy(() => import('././pages/Projects/Projects'))
 const NoMatch = lazy(() => import('./components/NoMatch'))
 const Hero = lazy(() => import('././components/Hero/Hero'))
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (

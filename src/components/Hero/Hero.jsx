@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+// import SnakeGame from '../SnakeGame/SnakeGame'
 
 const Hero = () => {
   return (
@@ -26,6 +28,7 @@ const Hero = () => {
           </p>
         </div>
       </section>
+      {/* <SnakeGame /> */}
       <div>Game goes here...</div>
     </div>
   )
