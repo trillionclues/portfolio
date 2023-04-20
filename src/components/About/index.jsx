@@ -34,7 +34,7 @@ function TabItems({ activeTab }) {
   }
   if (activeTab === 2) {
     return (
-      <div className='flex md:flex-row flex-col'>
+      <div className='flex md:flex-row flex-col '>
         <Info_personal />
         <Pers_details />
         <Gist />
@@ -43,7 +43,7 @@ function TabItems({ activeTab }) {
   }
   if (activeTab === 3) {
     return (
-      <div className='flex md:flex-row flex-col'>
+      <div className='flex md:flex-row flex-col '>
         <Info_hobbies />
         <Hob_details />
         <Gist />
@@ -66,7 +66,7 @@ const Index = () => {
         {sections.map((tab) => (
           <div
             key={tab.id}
-            className={`${tab.id === activeTab ? 'active' : ''}`}
+            className={`w-[3rem] ${tab.id === activeTab ? 'active' : ''}`}
             style={{
               filter: `${
                 tab.id === activeTab ? 'invert(1) grayscale(100%)' : ''

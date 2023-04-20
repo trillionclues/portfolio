@@ -5,10 +5,8 @@ export const fetchGists = async (
   per_page = 10,
   page = 1
 ) => {
-  return axios
-    .get(
-      `https://api.github.com/users/${username}/gists?per_page=${per_page}&page=${page}`
-    )
-    .then((response) => response.data)
-    .catch((error) => console.log(error))
+  const response = await axios.get(
+    `https://api.github.com/users/${username}/gists?per_page=${per_page}&page=${page}`
+  )
+  return response.data
 }
