@@ -1,4 +1,5 @@
 import { BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs'
+import arrowDown from '/icons/arrow-down.svg'
 
 export const developer = [
   {
@@ -9,7 +10,7 @@ export const developer = [
       {
         'professional-info': {
           title: 'professional-info',
-          icon: '',
+          icon: arrowDown,
           info: [
             {
               experience: {
@@ -17,12 +18,12 @@ export const developer = [
                 description:
                   'Over the past 5 years, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
               },
-              'hard-skills': {
+              hardSkills: {
                 title: 'Hard Skills',
                 description:
                   'Over the past 5 years, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
               },
-              'soft-skills': {
+              softSkills: {
                 title: 'Soft Skills',
                 description:
                   'Over the past 5 years, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -33,7 +34,7 @@ export const developer = [
 
         'personal-info': {
           title: 'personal-info',
-          icon: '',
+          icon: arrowDown,
           info: [
             {
               bio: {
@@ -57,7 +58,7 @@ export const developer = [
 
         'hobbies-info': {
           title: 'hobbies-info',
-          icon: '',
+          icon: arrowDown,
           info: [
             {
               sports: {
@@ -65,7 +66,7 @@ export const developer = [
                 description:
                   'I love to play football, watch movies and read books',
               },
-              'favourite-games': {
+              favGames: {
                 title: 'Favourite Games',
                 description:
                   'I love to play football, watch movies and read books',
@@ -78,11 +79,12 @@ export const developer = [
 
     contact: [
       {
-        direct: {
-          title: 'Direct',
+        contacts: {
+          title: 'Contacts',
+          icon: arrowDown,
           sources: {
             email: 'exceln646@gmail.com',
-            phone: '+234 9032942903',
+            phone: '+2349032942903',
           },
         },
 

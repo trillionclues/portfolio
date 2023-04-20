@@ -25,16 +25,25 @@ html {
 }
 
 .body-center {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   max-height: 92vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 5px;
   border-width: 1px;
 }
 
 .menu-item {
   display: block;
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding: 1rem 1rem;
+  }
+
+  .body-center {
+    max-height: 95vh;
+  }
 }
 
 @tailwind base;

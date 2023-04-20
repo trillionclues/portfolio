@@ -4,7 +4,7 @@ const Home = lazy(() => import('././pages/Home/Home'))
 const About = lazy(() => import('././pages/About/About'))
 const Contact = lazy(() => import('././pages/Contact/Contact'))
 const Projects = lazy(() => import('././pages/Projects/Projects'))
-const NoMatch = lazy(() => import('./components/NoMatch'))
+const NoMatch = lazy(() => import('./routes/NoMatch'))
 const Hero = lazy(() => import('././components/Hero/Hero'))
 
 const App = () => {
