@@ -17,7 +17,7 @@ const Header = () => {
         const { logo } = dev
         return (
           <nav key={index} className='flex justify-between items-center'>
-            <li className='no-underline text-textColor list-none border-0 sm:border-r sm:border-r-outline sm:py-2.5 py-4 px-5 sm:pr-20 md:pr-32 cursor-pointer hover:text-slate-200'>
+            <li className='no-underline text-textColor list-none border-0 sm:border-r sm:border-r-outline sm:py-2.5 py-4 px-5 sm:pr-20 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer hover:text-slate-200'>
               <NavLink to='/'>{logo}</NavLink>
             </li>
             <div className='flex block sm:grow justify-between items-center '>
@@ -65,7 +65,7 @@ const Header = () => {
                   ${!isOpen ? 'hidden sm:block' : 'block w-full'}
                   `}
                   >
-                    _articles
+                    _timeline
                   </li>
                 </NavLink>
               </ul>

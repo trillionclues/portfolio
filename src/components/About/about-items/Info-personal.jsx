@@ -15,7 +15,7 @@ export const Info_personal = () => {
   const [education, setEducation] = useState(true)
 
   return (
-    <section className='md:w-[228px] md:border-r md:border-r-outline'>
+    <section className='xmd:w-[240px] xl:w-[231px] oxl:w-[257px] md:border-r md:border-r-outline'>
       {developer.map((dev, index) => {
         const { about } = dev
 
@@ -23,7 +23,7 @@ export const Info_personal = () => {
           <nav key={index}>
             <div className='flex justify-start items-center py-2 border-b border-b-outline cursor-pointer px-3'>
               <img src={about[0]['personal-info'].icon} />
-              <h3 className='pl-2 text-base text-white tracking-wider'>
+              <h3 className='pl-2 text-sm text-white tracking-wider'>
                 {about[0]['personal-info'].title}
               </h3>
             </div>

@@ -8,6 +8,7 @@ import folder1 from '/icons/folder1.svg'
 import folder2 from '/icons/folder2.svg'
 import folder3 from '/icons/folder3.svg'
 import Contact from './Contact'
+import Prof_details from '../about-details/Prof_details'
 
 export const Info_professional = () => {
   const [toggleExp, setToggleExp] = useState(true)
@@ -15,16 +16,16 @@ export const Info_professional = () => {
   const [softSkills, setSoftSkills] = useState(true)
 
   return (
-    <section className='md:w-[228px] md:border-r md:border-r-outline'>
+    <section className='md:w-[240px] xl:w-[231px] oxl:w-[257px] md:border-r md:border-r-outline'>
       <div>
         {developer.map((dev, index) => {
           const { about } = dev
           // console.log(about)
           return (
             <nav key={index}>
-              <div className='flex justify-around items-center py-2 border-b border-b-outline cursor-pointer px-2'>
+              <div className='flex justify-start items-center py-2 border-b border-b-outline cursor-pointer px-2'>
                 <img src={about[0]['professional-info'].icon} />
-                <h4 className='pl-2 text-base text-white tracking-wider'>
+                <h4 className='pl-2 text-sm text-white tracking-wider'>
                   {about[0]['professional-info'].title}
                 </h4>
               </div>
