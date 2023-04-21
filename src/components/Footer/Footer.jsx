@@ -11,7 +11,7 @@ const Footer = () => {
             return (
               <nav className='flex justify-center items-center p-0' key={index}>
                 <ul className='flex items-center list-none p-0 m-0 text-md text-textColor  items-center'>
-                  <h4>find me in:</h4>
+                  <h4>find me on:</h4>
                   <li className='no-underline border-r border-r-outline  py-3 px-5 cursor-pointer  hover:text-slate-200'>
                     <a href={github.url} target='_blank'>
                       {github.icon}

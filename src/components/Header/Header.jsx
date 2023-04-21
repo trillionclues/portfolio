@@ -59,7 +59,7 @@ const Header = () => {
                   </li>
                 </NavLink>
 
-                <NavLink to='/articles'>
+                <NavLink to='/timeline'>
                   <li
                     className={`no-underline border-r border-r-outline py-2.5 px-5 cursor-pointer hover:text-slate-200 
                   ${!isOpen ? 'hidden sm:block' : 'block w-full'}
@@ -69,7 +69,7 @@ const Header = () => {
                   </li>
                 </NavLink>
               </ul>
-              <NavLink to='/contact'>
+              <NavLink to='/contact-me'>
                 <li
                   className={`list-none  no-underline border-l border-l-outline py-2.5 px-5 cursor-pointer text-textColor hover:text-slate-200 ${
                     !isOpen ? 'hidden sm:block' : 'block w-full'

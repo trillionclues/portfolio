@@ -5,6 +5,7 @@ const Home = lazy(() => import('././pages/Home/Home'))
 const About = lazy(() => import('././pages/About/About'))
 const Contact = lazy(() => import('././pages/Contact/Contact'))
 const Projects = lazy(() => import('././pages/Projects/Projects'))
+const Timeline = lazy(() => import('././pages/Timeline/Timeline'))
 const NoMatch = lazy(() => import('./routes/NoMatch'))
 const Hero = lazy(() => import('././components/Hero/Hero'))
 
@@ -19,6 +20,7 @@ const App = () => {
               <Route exact path='/about-me' element={<About />} />
               <Route exact path='/contact-me' element={<Contact />} />
               <Route exact path='/projects' element={<Projects />} />
+              <Route exact path='/timeline' element={<Timeline />} />
               <Route exact path='*' element={<NoMatch />} />
             </Routes>
           </Home>
