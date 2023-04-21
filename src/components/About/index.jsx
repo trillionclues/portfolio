@@ -34,7 +34,7 @@ function TabItems({ activeTab }) {
   }
   if (activeTab === 2) {
     return (
-      <div className='flex md:flex-row flex-col '>
+      <div className='flex md:flex-row flex-col relative'>
         <Info_personal />
         <Pers_details />
         <Gist />
@@ -61,7 +61,7 @@ const Index = () => {
   }
 
   return (
-    <div className='flex h-screen'>
+    <div className='flex sticky'>
       <div className='border-r border-r-outline cursor-pointer hidden md:py-3 md:block md:px-3'>
         {sections.map((tab) => (
           <div

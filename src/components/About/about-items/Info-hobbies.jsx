@@ -13,7 +13,7 @@ export const Info_hobbies = () => {
   const [favorite, setFavorite] = useState(true)
 
   return (
-    <section className='md:w-[240px] xl:w-[231px] oxl:w-[257px] md:border-r md:border-r-outline'>
+    <section className='md:w-[240px] xl:w-[231px] oxl:w-[250px] md:border-r md:border-r-outline'>
       {developer.map((dev, index) => {
         const { about } = dev
         return (

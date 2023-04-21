@@ -3,7 +3,7 @@ import { developer } from '../../assets/developer'
 
 const Footer = () => {
   return (
-    <div className='w-full sticky top-[100vh] h-12 bg-nav border-t border-t-outline border-t-2 border-rounded-md'>
+    <div className='w-full h-full bg-nav border-t border-t-outline border-t-2 border-rounded-md'>
       {developer.map((items) => {
         return items.contact.map((item) => {
           return item.social.map((link, index) => {

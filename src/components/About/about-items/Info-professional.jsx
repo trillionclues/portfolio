@@ -16,7 +16,7 @@ export const Info_professional = () => {
   const [softSkills, setSoftSkills] = useState(true)
 
   return (
-    <section className='md:w-[240px] xl:w-[231px] oxl:w-[257px] md:border-r md:border-r-outline'>
+    <section className='md:w-[240px] xl:w-[231px] oxl:w-[250px] md:border-r md:border-r-outline'>
       <div>
         {developer.map((dev, index) => {
           const { about } = dev

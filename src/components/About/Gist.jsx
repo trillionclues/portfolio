@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import Loading from '../../routes/Loading'
 import CommentImg from '/icons/gist/comments.svg'
 import starImg from '/icons/gist/star.svg'
 
 const Gist = () => {
   const [gistData, setGistData] = useState([])
+  const [Isloading, setIsLoding] = useState(false)
 
   const fetchGists = async () => {
     const response = await axios(
@@ -20,6 +22,7 @@ const Gist = () => {
     // wait for promises to resolve
     const data = await Promise.all(promises)
     setGistData(data)
+    setIsLoding(true)
   }
 
   useEffect(() => {
@@ -28,8 +31,8 @@ const Gist = () => {
   // console.log(gistData)
 
   return (
-    <section className='w-5/12 flex pr-12 px-2 border-t mt-[2.2rem] border-t-outline'>
-      <div className='flex flex-col pt-8 px-3'>
+    <section className='w-5/12 h-full overflow-clip flex pr-12 px-2 mt-[2rem] border-t-outline'>
+      <div className='flex flex-col px-3'>
         <p className='text-textColor text-base'> // Code snippet showcase:</p>
         <div className='flex flex-col py-3'>
           {gistData.map((gist, idx) => {
@@ -66,29 +69,35 @@ const Gist = () => {
                   </div>
                 </div>
 
-                <section className='flex flex-col max-h-[50%]'>
-                  <div className=' flex flex-row justify-between items-center pb-6'>
-                    {gist.files &&
-                      Object.entries(gist.files).map(([fileName, fileData]) => (
-                        <div
-                          key={fileName}
-                          className='rounded-lg overflow-clip w-300px bg-[#010c15] md:w-[420px] xl:w-[380px] oxl:w-[425px]'
-                        >
-                          <a href={fileData.raw_url} target='_blank'>
-                            <p className='bg-textColor cursor-pointer text-[#010c15] px-4 py-2 text-sm font-bold'>
-                              {fileName}
-                            </p>
-                          </a>
-                          <div className='bg-#010c15 px-4 py-2 text-sm font-bold'>
-                            <pre className='text-textColor text-sm font-bold'>
-                              <code className='language-javascript text-textColor text-sm font-bold'>
-                                {fileData.content}
-                              </code>
-                            </pre>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
+                <section className='flex flex-col'>
+                  {!Isloading ? (
+                    <Loading />
+                  ) : (
+                    <div className=' flex flex-row justify-between items-center pb-6 code-block'>
+                      {gist.files &&
+                        Object.entries(gist.files).map(
+                          ([fileName, fileData]) => (
+                            <div
+                              key={fileName}
+                              className='rounded-lg overflow-clip w-300px bg-[#010c15] md:w-[420px] xl:w-[380px] oxl:w-[425px]'
+                            >
+                              <a href={fileData.raw_url} target='_blank'>
+                                <p className='bg-textColor cursor-pointer text-[#010c15] px-4 py-2 text-sm font-bold'>
+                                  {fileName}
+                                </p>
+                              </a>
+                              <div className='bg-#010c15 px-4 py-2 text-sm font-bold'>
+                                <pre className='text-textColor text-sm font-bold'>
+                                  <code className='language-javascript text-textColor text-sm font-bold'>
+                                    {fileData.content}
+                                  </code>
+                                </pre>
+                              </div>
+                            </div>
+                          )
+                        )}
+                    </div>
+                  )}
                 </section>
               </section>
             )
