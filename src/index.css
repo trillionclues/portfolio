@@ -29,6 +29,32 @@ html {
   width: 0.5rem;
 }
 
+/* input */
+input[type='checkbox'] {
+  appearance: none;
+  border: 2px solid #607b96;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked {
+  background-color: #607b96;
+}
+
+input[type='checkbox']:checked::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  transform: rotate(45deg);
+  border: solid #fff;
+  /* border-width: 0 3px 3px 0; */
+}
+
 .body-center {
   max-height: 90vh;
   overflow-y: auto;

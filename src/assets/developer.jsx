@@ -1,5 +1,8 @@
 import { BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs'
 import arrowDown from '/icons/arrow-down.svg'
+import reactImg from '/icons/techs/react.svg'
+import cssImg from '/icons/techs/css.svg'
+import htmlImg from '/icons/techs/html.svg'
 
 export const developer = [
   {
@@ -153,19 +156,29 @@ export const developer = [
 
     projects: [
       {
-        1: {
+        first: {
           title: '_ui-animations',
           description: 'Duis aute irure dolor in velit esse cillum dolore.',
           img: '/images/projects/ui-animations2.png',
-          tech: ['Flutter'],
+          tech: ['React', 'all'],
           url: 'https://github.com/',
+          icon: reactImg,
         },
-        2: {
+        second: {
           title: '_ai-resources',
           description: 'Duis aute irure dolor in velit esse cillum dolore.',
           img: '/images/projects/ai-resources.png',
-          tech: ['Gatsby'],
+          tech: ['CSS', 'all'],
           url: 'https://github.com/',
+          icon: cssImg,
+        },
+        third: {
+          title: '_tetris-game',
+          description: 'Duis aute irure dolor in velit esse cillum dolore.',
+          img: '/images/projects/tetris-game.png',
+          tech: ['Html', 'all'],
+          url: 'https://github.com/',
+          icon: htmlImg,
         },
       },
     ],

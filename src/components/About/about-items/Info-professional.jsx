@@ -26,6 +26,7 @@ export const Info_professional = () => {
               </div>
               <ul className='pl-3 pb-2'>
                 {about[0]['professional-info'].info.map((item, index) => {
+                  // console.log(item)
                   return (
                     <div key={index}>
                       <div

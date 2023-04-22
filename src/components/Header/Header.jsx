@@ -18,9 +18,12 @@ const Header = () => {
         const { logo } = dev
         return (
           <nav key={index} className='flex justify-between items-center'>
-            <li className='no-underline text-textColor list-none border-b-0 md:border-r md:border-r-outline py-4 md:py-[10px] md:py-3 px-5 pr-20 md:pr-10 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer lg:text-sm text-xl hover:text-slate-200 transition-all duration-300 hover:bg-outline'>
-              <NavLink to='/'>{logo}</NavLink>
-            </li>
+            <NavLink to='/'>
+              <li className='no-underline text-textColor list-none border-b-0 md:border-r md:border-r-outline py-4 md:py-[10px] md:py-3 px-5 pr-20 md:pr-10 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer lg:text-sm text-xl hover:text-slate-200 transition-all duration-300 hover:bg-outline'>
+                {logo}
+              </li>
+            </NavLink>
+
             <div className='flex block sm:grow justify-between items-center '>
               <div className='block sm:hidden px-5' onClick={toggleNavbar}>
                 {isOpen ? (
