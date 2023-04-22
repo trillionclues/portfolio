@@ -1,12 +1,17 @@
 import axios from 'axios'
 
-export const fetchGists = async (
-  username = 'trillionclues',
-  per_page = 10,
-  page = 1
-) => {
-  const response = await axios.get(
-    `https://api.github.com/users/${username}/gists?per_page=${per_page}&page=${page}`
+export const fetchGists = async () => {
+  const response = await axios(
+    'https://api.github.com/users/trillionclues/gists'
   )
-  return response.data
+
+  // create an array of Promises
+  const promises = response.data.map(async (gist) => {
+    const res = await axios(gist.url)
+    return res.data
+  })
+
+  // wait for promises to resolve
+  const data = await Promise.all(promises)
+  return data
 }

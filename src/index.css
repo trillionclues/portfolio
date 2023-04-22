@@ -30,7 +30,7 @@ html {
 }
 
 .body-center {
-  max-height: 92vh;
+  max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 5px;
@@ -65,7 +65,6 @@ html {
 }
 
 /* lazy loading */
-
 .loading {
   display: flex;
   justify-content: center;
@@ -292,5 +291,22 @@ html {
 
   .body-center {
     max-height: 95vh;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 11%;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    cursor: pointer;
+  }
+
+  .contact-toggle {
+    position: absolute;
+    top: 36.5%;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
   }
 }

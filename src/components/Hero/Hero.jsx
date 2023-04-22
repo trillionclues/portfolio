@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const Hero = () => {
   return (
-    <div className='flex flex-col md:flex-row hero-content h-screen'>
+    <div className='flex flex-col md:flex-row hero-content h-full'>
       <section className='flex hero-item flex-col mr-12'>
         <div className='justify-center items-center mb-11'>
           <p className='text-paraColor text-sm md:text-xl'>Hi all. I am</p>

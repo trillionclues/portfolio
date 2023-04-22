@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { developer } from '../../assets/developer'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { FaTimes } from 'react-icons/fa'
+import Nav_items from './Nav_items'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,12 +13,12 @@ const Header = () => {
   }
 
   return (
-    <div className='w-full bg-nav border-b border-b-outline border-b-2 border-rounded-md'>
+    <div className='w-full bg-nav border-b border-b-outline border-b-1 md:border-b-2 border-rounded-sm md:border-rounded-md'>
       {developer.map((dev, index) => {
         const { logo } = dev
         return (
           <nav key={index} className='flex justify-between items-center'>
-            <li className='no-underline text-textColor list-none border-0 sm:border-r sm:border-r-outline sm:py-2.5 py-4 px-5 sm:pr-20 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer hover:text-slate-200'>
+            <li className='no-underline text-textColor list-none border-b-0 md:border-r md:border-r-outline py-4 md:py-[10px] md:py-3 px-5 pr-20 md:pr-10 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer lg:text-sm text-xl hover:text-slate-200 transition-all duration-300 hover:bg-outline'>
               <NavLink to='/'>{logo}</NavLink>
             </li>
             <div className='flex block sm:grow justify-between items-center '>
@@ -35,44 +36,16 @@ const Header = () => {
                 )}
               </div>
               <ul
-                className={`sm:flex sm-block relative flex-col sm:flex-row items-center list-none p-0 m-0 text-sm text-textColor ${
-                  isOpen ? 'hidden' : ' block'
-                }}`}
+                className={`menu-toggle sm:flex sm-block relative flex-col sm:flex-row items-center list-none p-0 m-0 text-sm text-textColor
+                ${isOpen ? 'bg-primary hidden' : 'block'}}
+                `}
               >
-                <NavLink to='/about-me'>
-                  <li
-                    className={`no-underline border-r  border-r-outline py-2.5 px-5 cursor-pointer hover:text-slate-200 
-                  ${!isOpen ? 'hidden sm:block' : 'block w-full'}
-                  `}
-                  >
-                    _about-me
-                  </li>
-                </NavLink>
-
-                <NavLink to='/projects'>
-                  <li
-                    className={`no-underline border-r border-r-outline py-2.5 px-5 cursor-pointer hover:text-slate-200 
-                  ${!isOpen ? 'hidden sm:block' : 'block w-full'}
-                  `}
-                  >
-                    _projects
-                  </li>
-                </NavLink>
-
-                <NavLink to='/timeline'>
-                  <li
-                    className={`no-underline border-r border-r-outline py-2.5 px-5 cursor-pointer hover:text-slate-200 
-                  ${!isOpen ? 'hidden sm:block' : 'block w-full'}
-                  `}
-                  >
-                    _timeline
-                  </li>
-                </NavLink>
+                <Nav_items isOpen={isOpen} />
               </ul>
               <NavLink to='/contact-me'>
                 <li
-                  className={`list-none  no-underline border-l border-l-outline py-2.5 px-5 cursor-pointer text-textColor hover:text-slate-200 ${
-                    !isOpen ? 'hidden sm:block' : 'block w-full'
+                  className={`border-b border-b-outline md:border-b-0 border-b-1 contact-toggle list-none no-underline border-0 md:border-l md:border-l-outline py-3 md:py-[6px] pr-5 pl-5 cursor-pointer text-textColor hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm ${
+                    !isOpen ? 'bg-primary hidden sm:block' : 'block w-full'
                   }
                 }`}
                 >

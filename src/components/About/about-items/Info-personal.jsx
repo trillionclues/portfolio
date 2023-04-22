@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { developer } from '../../../assets/developer'
-import {
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowRight,
-} from 'react-icons/md'
-import folder1 from '/icons/folder1.svg'
-import folder2 from '/icons/folder2.svg'
-import folder3 from '/icons/folder3.svg'
 import Contact from './Contact'
+import Menu1 from './Personal/Menu1'
+import Menu2 from './Personal/Menu2'
+import Menu3 from './Personal/Menu3'
 
 export const Info_personal = () => {
   const [toggleBio, setToggleBio] = useState(true)
@@ -36,82 +32,13 @@ export const Info_personal = () => {
                       className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
                       onClick={() => setToggleBio(!toggleBio)}
                     >
-                      <div className='text-base'>
-                        {toggleBio ? (
-                          <div className='flex flex-row justify-center items-center text-center'>
-                            <MdOutlineKeyboardArrowRight />
-                            <img className='pr-2 pl-2' src={folder1} alt='' />
-                            <li
-                              className='text-sm pl-2 text-textColor'
-                              key={index}
-                            >
-                              {item.bio.title}
-                            </li>
-                          </div>
-                        ) : (
-                          <div className='flex flex-row justify-center items-center text-center'>
-                            <MdOutlineKeyboardArrowDown />
-                            <img className='pr-2 pl-2' src={folder1} alt='' />
-                            <li className='text-sm pl-2' key={index}>
-                              {item.bio.title}
-                            </li>
-                          </div>
-                        )}
-                      </div>
+                      <Menu1 toggleBio={toggleBio} index={index} item={item} />
                     </div>
                     <div>
-                      <div
-                        className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setInterest(!interest)}
-                      >
-                        {interest ? (
-                          <div className='flex flex-row justify-center items-center text-center'>
-                            <MdOutlineKeyboardArrowRight />
-                            <img className='pr-2 pl-2' src={folder2} alt='' />
-                            <li
-                              className='text-sm pl-2 text-textColor'
-                              key={index}
-                            >
-                              {item.interests.title}
-                            </li>
-                          </div>
-                        ) : (
-                          <div className='flex flex-row justify-center items-center text-center'>
-                            <MdOutlineKeyboardArrowDown />
-                            <img className='pr-2 pl-2' src={folder2} alt='' />
-                            <li className='text-sm pl-2' key={index}>
-                              {item.interests.title}
-                            </li>
-                          </div>
-                        )}
-                      </div>
+                      <Menu2 interest={interest} index={index} item={item} />
                     </div>
                     <div>
-                      <div
-                        className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setEducation(!education)}
-                      >
-                        {education ? (
-                          <div className='flex flex-row justify-center items-center text-center'>
-                            <MdOutlineKeyboardArrowRight />
-                            <img className='pr-2 pl-2' src={folder3} alt='' />
-                            <li
-                              className='text-sm pl-2 text-textColor'
-                              key={index}
-                            >
-                              {item.education.title}
-                            </li>
-                          </div>
-                        ) : (
-                          <div className='flex flex-row justify-center items-center text-center'>
-                            <MdOutlineKeyboardArrowDown />
-                            <img className='pr-2 pl-2' src={folder3} alt='' />
-                            <li className='text-sm pl-2' key={index}>
-                              {item.education.title}
-                            </li>
-                          </div>
-                        )}
-                      </div>
+                      <Menu3 education={education} item={item} index={index} />
                     </div>
                   </div>
                 )

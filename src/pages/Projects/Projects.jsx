@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Projects = () => {
-  return <div className='h-full'>Projects</div>
+  return <div className='h-screen'>Projects</div>
 }
 
 export default Projects
