@@ -36,7 +36,7 @@ Some of the key features I thought could be nice to add include:
 ## Credits
 
 - The design for my website was inspired by the Developer Portfolio template by [Michael Weaver](https://developer-portfolio-v2.netlify.app/)
-- - The icons used on my website were from [React Icons](https://react-icons.github.io/react-icons/)
+- The icons used on were from [React Icons](https://react-icons.github.io/react-icons/)
 
 ## License
 
