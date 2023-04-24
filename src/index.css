@@ -331,18 +331,18 @@ input[type='checkbox']:checked::after {
 
 .css-blurry-gradient-green {
   position: absolute;
-  top: 20%;
+  top: 10%;
   right: 30%;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 350px;
   border-radius: 0% 50% 0% 50%;
   filter: blur(70px);
   background: radial-gradient(
-    circle at 50% 50%,
+    circle at 45% 50%,
     rgba(67, 217, 173, 1),
     rgba(76, 0, 255, 0)
   );
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 10;
 }
 @media (max-width: 640px) {

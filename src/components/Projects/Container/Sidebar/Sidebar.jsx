@@ -5,7 +5,7 @@ import arrowDown from '/icons/arrow-down.svg'
 
 const Sidebar = () => {
   return (
-    <div className='w-full h-[32rem] md:border-r md:border-r-outline'>
+    <div className='w-full h-full md:border-r md:border-r-outline'>
       <div>
         {developer.map((dev, idx) => {
           const { projects } = dev

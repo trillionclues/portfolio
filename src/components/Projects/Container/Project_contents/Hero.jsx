@@ -1,64 +1,51 @@
 import React from 'react'
 import { developer } from '../../../../assets/developer'
+import Card from './Card'
 
 const Hero = () => {
   return (
-    <div className='w-full'>
-      <section className='w-full'>
-        {/* <div className='hero-header'>
-          <h1 className='hero-header__title--main'>Projects</h1>
-        </div> */}
-
-        <div className='hero-content'>
-          {developer.map((dev, index) => {
-            const { projects } = dev
-            return (
-              <div className='hero-content__projects' key={index}>
-                {projects.map((project, idx) => {
-                  return (
-                    <div key={index}>
-                      <li className='flex justify-start items-center py-2.5 px-3'>
-                        <img
-                          className='w-[100px] h-[100px] object-contain'
-                          src={project.first.img}
-                          alt='icon'
-                        />
-                        <div>
-                          <h3>{project.first.title}</h3>
-                          <p>{project.first.description}</p>
-                        </div>
-                      </li>
-                      <li className='flex justify-start items-center py-2.5 px-3'>
-                        <img
-                          className='w-[100px] h-[100px] object-contain'
-                          src={project.second.img}
-                          alt='icon'
-                        />
-                        <div>
-                          <h3>{project.second.title}</h3>
-                          <p>{project.second.description}</p>
-                        </div>
-                      </li>
-                      <li className='flex justify-start items-center py-2.5 px-3'>
-                        <img
-                          className='w-[100px] h-[100px] object-contain'
-                          src={project.third.img}
-                          alt='icon'
-                        />
-                        <div>
-                          <h3>{project.third.title}</h3>
-                          <p>{project.third.description}</p>
-                        </div>
-                      </li>
-                    </div>
-                  )
-                })}
-              </div>
-            )
-          })}
-        </div>
-      </section>
-    </div>
+    <section className='w-11/12 flex items-start justify-center mb-10'>
+      {developer.map((dev, index) => {
+        const { projects } = dev
+        return (
+          <div key={index} className=''>
+            {projects.map((project, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+                >
+                  <Card
+                    title={project.first.title}
+                    imageSrc={project.first.img}
+                    description={project.first.description}
+                    projecturl={project.first.url}
+                  />
+                  <Card
+                    title={project.second.title}
+                    imageSrc={project.second.img}
+                    description={project.second.description}
+                    projecturl={project.second.url}
+                  />
+                  <Card
+                    title={project.third.title}
+                    imageSrc={project.third.img}
+                    description={project.third.description}
+                    projecturl={project.third.url}
+                  />
+                  <Card
+                    title={project.third.title}
+                    imageSrc={project.third.img}
+                    description={project.third.description}
+                    projecturl={project.third.url}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        )
+      })}
+    </section>
   )
 }
 

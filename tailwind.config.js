@@ -20,6 +20,10 @@ export default {
         span3: '#4D5BCE',
         span4: '#E5E9F0',
       },
+
+      gridCustom: {
+        'auto-fit': 'repeat(auto-fit, minmax(250px, 3fr))',
+      },
       fontSize: {
         sm: '0.8rem',
         base: '1rem',
