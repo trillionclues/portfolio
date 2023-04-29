@@ -1,13 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Nav_items = ({ isOpen }) => {
+const Nav_items = ({ isOpen, isActive }) => {
   return (
     <>
       <NavLink to='/about-me'>
         <li
-          className={`border-b border-b-outline border-b-1 md:border-b-2 md:border-b-[#fea55f] no-underline border-r border-r-outline py-3 md:py-[5px] px-5 cursor-pointer  hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm
+          className={`border-b border-b-outline border-b-0 md:border-b-1 md:border-b-[#fea55f] no-underline border-r border-r-outline py-3 md:py-[5px] px-5 cursor-pointer  hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm
                   ${!isOpen ? 'hidden sm:block' : 'block w-full'}
+                  
+                  ${
+                    isActive('/about-me') ? 'border-b-2 border-b-[#fea55f]' : ''
+                  }
                   `}
         >
           _about-me
@@ -16,8 +20,12 @@ const Nav_items = ({ isOpen }) => {
 
       <NavLink to='/projects'>
         <li
-          className={`border-b border-b-outline md:border-b-0 border-b-1 no-underline border-r border-r-outline py-3 md:py-[6px] px-5 cursor-pointer hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm 
+          className={`border-b border-b-outline border-b-0 md:border-b-1 md:border-b-[#fea55f] no-underline border-r border-r-outline py-3 md:py-[5px] px-5 cursor-pointer  hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm 
                   ${!isOpen ? 'hidden sm:block' : 'block w-full'}
+                  
+                  ${
+                    isActive('/projects') ? 'border-b-2 border-b-[#fea55f]' : ''
+                  }
                   `}
         >
           _projects
@@ -26,8 +34,11 @@ const Nav_items = ({ isOpen }) => {
 
       <NavLink to='/timeline'>
         <li
-          className={`border-b border-b-outline md:border-b-0 border-b-1 no-underline border-r border-r-outline py-3 md:py-[6px] px-5 cursor-pointer hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm
+          className={`border-b border-b-outline border-b-0 md:border-b-1 md:border-b-[#fea55f] no-underline border-r border-r-outline py-3 md:py-[5px] px-5 cursor-pointer  hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm
                   ${!isOpen ? 'hidden sm:block' : 'block w-full'}
+                  ${
+                    isActive('/timeline') ? 'border-b-2 border-b-[#fea55f]' : ''
+                  }
                   `}
         >
           _timeline

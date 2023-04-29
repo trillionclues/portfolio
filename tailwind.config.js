@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  corePlugins: {
+    float: true,
+  },
   content: [
     './index.html',
     './pages/**/*.{js,ts,jsx,tsx}',

@@ -39,7 +39,9 @@ const Hero = () => {
               >
                 {visible < projects.length && (
                   <button
-                    className='bg-devColor text-white text-base py-2.5 px-6 rounded-lg focus:outline-none '
+                    className='bg-devColor text-white text-base py-2.5 px-6 rounded-lg focus:outline-none
+                  hover:bg-comment hover:text-gray-900transition duration-300 ease-in-out
+                    '
                     onClick={loadMore}
                   >
                     Load More

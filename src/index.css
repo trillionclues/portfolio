@@ -345,8 +345,6 @@ input[type='checkbox']:checked::after {
   z-index: 10;
 }
 
-/* slider */
-
 .card-section {
   display: grid;
   grid-template-columns: auto auto auto;
