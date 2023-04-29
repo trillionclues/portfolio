@@ -23,10 +23,10 @@ const Sidebar = () => {
                 <div className='aside-item-content'>
                   <ul className='pl-3 pt-3'>
                     {projects.map((project, idx) => {
-                      console.log(project)
+                      // console.log(project)
                       return (
                         <div key={idx} className='flex flex-col'>
-                          <Sidebar_items project={project} idx={idx} />
+                          <Sidebar_items project={project} />
                         </div>
                       )
                     })}

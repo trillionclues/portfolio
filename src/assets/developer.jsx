@@ -3,6 +3,9 @@ import arrowDown from '/icons/arrow-down.svg'
 import reactImg from '/icons/techs/react.svg'
 import cssImg from '/icons/techs/css.svg'
 import htmlImg from '/icons/techs/html.svg'
+import filledReact from '/icons/techs/filled/react.svg'
+import filledCss from '/icons/techs/filled/css.svg'
+import filledHtml from '/icons/techs/filled/html.svg'
 
 export const developer = [
   {
@@ -156,30 +159,40 @@ export const developer = [
 
     projects: [
       {
-        first: {
-          title: '_ui-animations',
-          description: 'Duis aute irure dolor in velit esse cillum dolore.',
-          img: '/images/projects/ui-animations2.png',
-          tech: ['React', 'all'],
-          url: 'https://github.com/',
-          icon: reactImg,
-        },
-        second: {
-          title: '_ai-resources',
-          description: 'Duis aute irure dolor in velit esse cillum dolore.',
-          img: '/images/projects/ai-resources.png',
-          tech: ['CSS', 'all'],
-          url: 'https://github.com/',
-          icon: cssImg,
-        },
-        third: {
-          title: '_tetris-game',
-          description: 'Duis aute irure dolor in velit esse cillum dolore.',
-          img: '/images/projects/tetris-game.png',
-          tech: ['Html', 'all'],
-          url: 'https://github.com/',
-          icon: htmlImg,
-        },
+        title: '_ui-animations',
+        description: 'Duis aute irure dolor in velit esse cillum dolore. ',
+        img: '/images/projects/ui-animations2.png',
+        tech: ['React', 'all'],
+        url: 'https://github.com/',
+        icon: reactImg,
+        filledIcon: filledReact,
+      },
+      {
+        title: '_ai-resources',
+        description: 'Duis aute irure dolor in velit esse cillum dolore.',
+        img: '/images/projects/ai-resources.png',
+        tech: ['CSS', 'all'],
+        url: 'https://github.com/',
+        icon: cssImg,
+        filledIcon: filledCss,
+      },
+      {
+        title: '_tetris-game',
+        description: 'Duis aute irure dolor in velit esse cillum dolore.',
+        img: '/images/projects/tetris-game.png',
+        tech: ['Html', 'all'],
+        url: 'https://github.com/',
+        icon: htmlImg,
+        filledIcon: filledHtml,
+      },
+      {
+        title: '_tetris-game',
+        description: 'Duis aute irure dolor in velit esse cillum dolore.',
+        img: '/images/projects/tetris-game.png',
+        tech: ['Html', 'all'],
+        url: 'https://github.com/',
+        icon: htmlImg,
+        filledIcon: filledHtml,
       },
     ],
   },

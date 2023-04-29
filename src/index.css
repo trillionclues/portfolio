@@ -142,7 +142,6 @@ input[type='checkbox']:checked::after {
 }
 
 /* error 404 */
-
 .error {
   text-align: center;
   font-family: 'Gilda Display', serif;
@@ -345,6 +344,15 @@ input[type='checkbox']:checked::after {
   opacity: 0.6;
   z-index: 10;
 }
+
+/* slider */
+
+.card-section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 28px;
+}
+
 @media (max-width: 640px) {
   #root {
     padding: 1rem 1rem;
@@ -369,5 +377,12 @@ input[type='checkbox']:checked::after {
     left: 0;
     width: 100%;
     cursor: pointer;
+  }
+
+  .card-section {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: -2rem;
+    gap: 28px;
   }
 }

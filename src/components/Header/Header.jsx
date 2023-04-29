@@ -25,7 +25,7 @@ const Header = () => {
             </NavLink>
 
             <div className='flex block sm:grow justify-between items-center '>
-              <div className='block sm:hidden px-5' onClick={toggleNavbar}>
+              <div className='block sm:hidden px-5 ' onClick={toggleNavbar}>
                 {isOpen ? (
                   <FaTimes
                     className='text-textColor text-2xl cursor-pointer'
@@ -40,7 +40,7 @@ const Header = () => {
               </div>
               <ul
                 className={`menu-toggle sm:flex sm-block relative flex-col sm:flex-row items-center list-none p-0 m-0 text-sm text-textColor
-                ${isOpen ? 'bg-primary hidden' : 'block'}}
+                ${isOpen ? 'z-10 bg-primary hidden' : 'block '}}
                 `}
               >
                 <Nav_items isOpen={isOpen} />

@@ -8,7 +8,7 @@ const Index = () => {
       <div className='sidebar' style={{ flex: '0 0 20.62%' }}>
         <Sidebar />
       </div>
-      <div className='sidebar' style={{ flex: '0 0 79.38%' }}>
+      <div className='home' style={{ flex: '0 0 74%' }}>
         <Hero />
       </div>
     </div>
