@@ -185,15 +185,6 @@ export const developer = [
         icon: htmlImg,
         filledIcon: filledHtml,
       },
-      {
-        title: '_tetris-game',
-        description: 'Duis aute irure dolor in velit esse cillum dolore.',
-        img: '/images/projects/tetris-game.png',
-        tech: ['Html', 'all'],
-        url: 'https://github.com/',
-        icon: htmlImg,
-        filledIcon: filledHtml,
-      },
     ],
   },
 ]

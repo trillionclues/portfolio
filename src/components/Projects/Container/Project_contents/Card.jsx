@@ -25,9 +25,7 @@ const Card = ({ title, img, description, url, filledIcon, index }) => {
               <img
                 src={filledIcon}
                 alt=''
-                className='absolute
-              top-10 right-4 w-5 h-5 object-cover rounded-full ml-4 -mt-8
-              '
+                className='absolute top-10 right-4 w-5 h-5 object-cover rounded-full ml-4 -mt-8'
               />
             </div>
             <div className='px-4 py-4 bg-[#010c15] rounded-b-xl'>

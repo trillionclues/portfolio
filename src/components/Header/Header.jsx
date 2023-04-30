@@ -8,6 +8,7 @@ import Nav_items from './Nav_items'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  // console.log(location)
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen)
