@@ -1,61 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useGlobalContext } from '../../../../../utils/context'
 
-const Sidebar_items = ({ projects }) => {
-  const [selectedTech, setSelectedTech] = useState('all')
-
-  // handle card tech render
-  const handleTechChange = (e) => {
-    setSelectedTech(e.target.value)
-  }
-
-  // filter selected tech
-  const filterProjects =
-    selectedTech === 'all'
-      ? projects
-      : projects.filter((project) => project.tech[0] === selectedTech)
-
-  // const filterProjects =
-  //   selectedTech === 'all'
-  //     ? projects
-  //     : projects.filter((project) => project.tech.includes(selectedTech))
-
-  console.log(filterProjects)
+const Sidebar_items = ({ projects, tech }) => {
+  const { handleTechChange, selectedTech } = useGlobalContext()
 
   return (
     <>
-      {filterProjects ? (
-        <li className='flex justify-start gap-3 items-center py-2.5 px-3'>
-          <input
-            type='checkbox'
-            onChange={handleTechChange}
-            value={selectedTech}
-            id=''
-            // checked={selectedTech === filterProjects.tech[0]}
-          />
-          <img src={filterProjects.icon} alt='react icon' />
+      <li className='flex justify-start gap-3 items-center py-2.5 px-3'>
+        <input
+          type='checkbox'
+          checked={selectedTech === tech}
+          onChange={() => handleTechChange({ target: { value: tech } })}
+        />
+        <label className='flex flex-row' htmlFor={tech}>
+          <img src={projects.icon} alt='react icon' />
           <h2 className='pl-2 text-base text-textColor font-normal tracking-wider'>
-            {filterProjects.tech[0]}
+            {tech}
           </h2>
-        </li>
-      ) : (
-        <h2>Oops😬! Refresh page</h2>
-      )}
-      {/* {project ? (
-        <li className='flex justify-start gap-3 items-center py-2.5 px-3'>
-          <input
-            type='checkbox'
-            onChange={handleTechChange}
-            value={selectedTech}
-            id=''
-          />
-          <img src={project.icon} alt='react icon' />
-          <option className='pl-2 text-base text-textColor font-normal tracking-wider'>
-            {project.tech[0]}
-          </option>
-        </li>
-      ) : (
-        <h2>Oops😬! Refresh page</h2>
-      )} */}
+        </label>
+      </li>
     </>
   )
 }

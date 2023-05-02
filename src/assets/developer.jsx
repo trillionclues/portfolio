@@ -160,7 +160,7 @@ export const developer = [
     projects: [
       {
         title: '_ui-animations',
-        description: 'Duis aute irure dolor in velit esse cillum dolore. ',
+        description: 'irure dolor in velit esse cillum dolore. ',
         img: '/images/projects/ui-animations2.png',
         tech: ['React', 'all'],
         url: 'https://github.com/',
@@ -178,7 +178,7 @@ export const developer = [
       },
       {
         title: '_tetris-game',
-        description: 'Duis aute irure dolor in velit esse cillum dolore.',
+        description: 'Aute irure dolor in velit esse cillum dolore.',
         img: '/images/projects/tetris-game.png',
         tech: ['Html', 'all'],
         url: 'https://github.com/',
