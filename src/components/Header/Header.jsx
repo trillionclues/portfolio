@@ -57,7 +57,12 @@ const Header = () => {
                 ${isOpen ? 'z-10 bg-primary hidden' : 'block '}}
                 `}
               >
-                <Nav_items isOpen={isOpen} isActive={isActive} />
+                <Nav_items
+                  isOpen={isOpen}
+                  isActive={isActive}
+                  toggleNavbar={toggleNavbar}
+                  setIsOpen={setIsOpen}
+                />
               </ul>
               <NavLink to='/contact-me'>
                 <li
