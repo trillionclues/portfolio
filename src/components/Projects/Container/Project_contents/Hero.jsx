@@ -7,6 +7,8 @@ const Hero = () => {
   const [visible, setVisible] = useState(3)
   const { filteredProjects } = useGlobalContext()
 
+  console.log(filteredProjects)
+
   const loadMore = () => {
     setVisible((prevValue) => prevValue + 3)
   }

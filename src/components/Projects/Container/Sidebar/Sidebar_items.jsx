@@ -9,6 +9,9 @@ const Sidebar_items = ({ projects, tech }) => {
       <li className='flex justify-start gap-3 items-center py-2.5 px-3'>
         <input
           type='checkbox'
+          name={tech}
+          id={tech}
+          value={tech}
           checked={selectedTech === tech}
           onChange={() => handleTechChange({ target: { value: tech } })}
         />

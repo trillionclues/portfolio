@@ -12,29 +12,55 @@ const AppContext = createContext()
 export const AppProvider = ({ children }) => {
   const [selectedTech, setSelectedTech] = useState('all')
   const [filteredProjects, setFilteredProjects] = useState([])
-  const [getProjectItem, setGetProjectItem] = useState([])
+  const [allProjects, setAllProjects] = useState([])
 
+  // load projects into state
   useEffect(() => {
+    setAllProjects(projects)
     setFilteredProjects(projects)
   }, [projects])
 
-  const handleTechChange = useCallback(
-    (e) => {
-      const tech = e.target.value
-      setSelectedTech(tech)
-
+  // update filtered project when selectedTech changes
+  useEffect(() => {
+    if (selectedTech === 'all') {
+      setFilteredProjects(allProjects)
+    } else {
       setFilteredProjects(
-        projects.filter((project) => {
-          if (selectedTech === 'all') {
-            return project
-          } else {
-            return project.tech.includes(selectedTech)
-          }
+        allProjects.filter((project) => {
+          return project.tech.includes(selectedTech)
         })
       )
-    },
-    [filteredProjects, projects]
-  )
+    }
+  }, [selectedTech, allProjects])
+
+  // update selectedTech state if match
+  const handleTechChange = useCallback((e) => {
+    const tech = e.target.value
+    setSelectedTech((prevSelectedTech) =>
+      prevSelectedTech === tech ? 'all' : tech
+    )
+  }, [])
+
+  // handle checbox project filter
+  // const handleTechChange = useCallback(
+  //   (e) => {
+  //     const tech = e.target.value
+  //     setSelectedTech((prevSelectedTech) =>
+  //       prevSelectedTech === tech ? 'all' : tech
+  //     )
+
+  //     if (tech === 'all') {
+  //       setFilteredProjects(allProjects)
+  //     } else {
+  //       setFilteredProjects(
+  //         allProjects.filter((project) => {
+  //           return project.tech.includes(tech)
+  //         })
+  //       )
+  //     }
+  //   },
+  //   [projects, allProjects]
+  // )
 
   return (
     <AppContext.Provider
@@ -45,6 +71,7 @@ export const AppProvider = ({ children }) => {
   )
 }
 
+// custom hook
 export const useGlobalContext = () => {
   return useContext(AppContext)
 }
