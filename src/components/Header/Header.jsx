@@ -53,7 +53,7 @@ const Header = () => {
                 )}
               </div>
               <ul
-                className={`menu-toggle sm:flex sm-block relative flex-col sm:flex-row items-center list-none p-0 m-0 text-sm text-textColor
+                className={`menu-toggle sm:flex sm-block relative flex-col sm:flex-row items-center list-none p-0 md:m-0 mt-10 text-sm text-textColor
                 ${isOpen ? 'z-10 bg-primary hidden' : 'block '}}
                 `}
               >
@@ -64,9 +64,18 @@ const Header = () => {
                   setIsOpen={setIsOpen}
                 />
               </ul>
-              <NavLink to='/contact-me'>
+              <NavLink
+                to='/contact-me'
+                onClick={() => {
+                  toggleNavbar()
+                  setIsOpen(false)
+                }}
+              >
                 <li
-                  className={`border-b border-b-[#fea55f] border-b-outline border-b-0 md:border-b-1 contact-toggle list-none no-underline border-0 md:border-l md:border-l-outline py-3 md:py-[6px] pr-5 pl-5 cursor-pointer text-textColor hover:text-slate-200 hover:bg-outline transition-all duration-300 text-lg lg:text-sm 
+                  className={`border-b border-b-[#fea55f] border-b-outline border-b-0
+                md:border-b-1 list-none no-underline border-0 md:border-l md:border-l-outline py-3 md:py-[6px] pr-5 pl-5 cursor-pointer text-textColor hover:text-slate-200
+                hover:bg-outline transition-all duration-300 text-lg lg:text-sm
+                md:relative absolute top-[2rem] md:top-0 top-[1.5rem] right-0 bg-primary mt-8 md:mt-0
                   ${!isOpen ? 'bg-primary hidden sm:block' : 'block w-full'}
                   ${
                     isActive('/contact-me')

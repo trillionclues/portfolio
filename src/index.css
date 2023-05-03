@@ -371,7 +371,7 @@ input[type='checkbox']:checked::after {
 
   .contact-toggle {
     position: absolute;
-    top: 36.5%;
+    top: 2rem;
     left: 0;
     width: 100%;
     cursor: pointer;
