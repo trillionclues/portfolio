@@ -6,6 +6,10 @@ import htmlImg from '/icons/techs/html.svg'
 import filledReact from '/icons/techs/filled/react.svg'
 import filledCss from '/icons/techs/filled/css.svg'
 import filledHtml from '/icons/techs/filled/html.svg'
+import filledNext from '/icons/techs/filled/nextjs.svg'
+import filledNode from '/icons/techs/filled/nodejs-icon.svg'
+import filledMongo from '/icons/techs/filled/mongodb.svg'
+import filledJS from '/icons/techs/filled/javascript3.svg'
 
 export const developer = [
   {
@@ -159,31 +163,80 @@ export const developer = [
 
     projects: [
       {
-        title: '_ui-animations',
-        description: 'irure dolor in velit esse cillum dolore. ',
-        img: '/images/projects/ui-animations2.png',
-        tech: ['React', 'all'],
-        url: 'https://github.com/',
+        title: '_notr-note-app',
+        description: 'Utility note-taking app using EJS and NodeJS w/GAuth20.',
+        img: '/images/projects/notr-note-taking-app.png',
+        tech: ['NodeJS', 'all'],
+        url: 'https://github.com/trillionclues/NotR-notes-app/',
         icon: reactImg,
+        filledIcon: filledNode,
+      },
+      {
+        title: '_bizboom-commerce',
+        description: 'NextJS ecommerce app with stripe integration and sanity.',
+        img: '/images/projects/ecommerce-wtih-nextjs.png',
+        tech: ['NextJS', 'all'],
+        url: 'https://github.com/trillionclues/bizboom-commerce',
+        icon: cssImg,
+        filledIcon: filledNext,
+      },
+      {
+        title: '_web3-scrambler',
+        description: 'HTML5 implementation of drag-drop events and auth',
+        img: '/images/projects/drag-drop-scramble-crypto-game.png',
+        tech: ['JavaScript', 'all'],
+        url: 'https://github.com/trillionclues/web3-drag-drop-game',
+        icon: htmlImg,
+        filledIcon: filledJS,
+      },
+      {
+        title: '_docket-todo-app',
+        description:
+          'Todo w/CRUD implementation for completed/in-progress todos',
+        img: '/images/projects/docket-todo-app.png',
+        tech: ['React', 'all'],
+        url: 'https://github.com/trillionclues/docket-list/',
+        icon: htmlImg,
         filledIcon: filledReact,
       },
       {
-        title: '_ai-resources',
-        description: 'Duis aute irure dolor in velit esse cillum dolore.',
-        img: '/images/projects/ai-resources.png',
-        tech: ['CSS', 'all'],
-        url: 'https://github.com/',
-        icon: cssImg,
-        filledIcon: filledCss,
+        title: '_phonie-isp',
+        description:
+          'Hackerthon project that detects telecoms carrier for numbers using Nigeria ISP network ',
+        img: '/images/projects/Isp-detector.png',
+        tech: ['JS', 'Html', 'Css', 'all'],
+        url: 'https://github.com/trillionclues/phonie-app',
+        icon: htmlImg,
+        filledIcon: filledJS,
       },
       {
-        title: '_tetris-game',
-        description: 'Aute irure dolor in velit esse cillum dolore.',
-        img: '/images/projects/tetris-game.png',
-        tech: ['Html', 'all'],
-        url: 'https://github.com/',
+        title: '_streemit-movies',
+        description: 'Movie recommendation website using MovieDB Api.',
+        img: '/images/projects/movie-recommendation-website.png',
+        tech: ['JS', 'Html', 'Css', 'all'],
+        url: 'https://github.com/trillionclues/streamit-movie-app',
         icon: htmlImg,
-        filledIcon: filledHtml,
+        filledIcon: filledJS,
+      },
+      {
+        title: '_notefy-note-app',
+        description:
+          'Note taking app with CRUD functions, text limit and timestamps.',
+        img: '/images/projects/note-app-with-text-limit.png',
+        tech: ['React', 'all'],
+        url: 'https://github.com/trillionclues/notefy-app',
+        icon: htmlImg,
+        filledIcon: filledReact,
+      },
+      {
+        title: '_travelo-bookings',
+        description:
+          'Travel booking website landing page using React to filter and map items on request.',
+        img: '/images/projects/travel-booking-landing-page.png',
+        tech: ['React', 'all'],
+        url: 'https://github.com/trillionclues/travelo-landing-page/',
+        icon: htmlImg,
+        filledIcon: filledReact,
       },
     ],
   },
