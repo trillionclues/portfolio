@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Contacts = ({ title, icon, icon2, toggleSidebar, setToggleSidebar }) => {
-  console.log(title)
+  // console.log(title)
   return (
     <>
       <h1 className='w-full py-2.5 px-3 block md:hidden text-base'>

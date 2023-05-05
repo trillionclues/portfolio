@@ -83,10 +83,10 @@ const Aside = () => {
                         </h1>
                       </div>
                       <div className='link-socials pt-3'>
-                        {findMeIn.map((links) => {
+                        {findMeIn.map((links, index) => {
                           const { sources } = links
                           return (
-                            <div>
+                            <div key={index}>
                               {sources.map((link, idx) => {
                                 return <LinkCards key={idx} {...link} />
                               })}

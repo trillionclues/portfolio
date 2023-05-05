@@ -90,6 +90,12 @@ input[type='checkbox']:checked::after {
   bottom: 0;
 }
 
+.input-focus:focus {
+  outline: none;
+  border-color: #607b96;
+  box-shadow: 0 0 0 3px rgba(96, 123, 150, 0.5);
+}
+
 /* lazy loading */
 .loading {
   display: flex;

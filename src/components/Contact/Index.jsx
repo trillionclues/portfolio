@@ -1,6 +1,6 @@
 import React from 'react'
 import Aside from './Components/Aside/Aside'
-import Main from './Components/Main'
+import Main from './Components/Main/Main'
 
 const Index = () => {
   return (
