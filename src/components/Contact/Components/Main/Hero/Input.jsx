@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Input = ({
   handleEmailChange,
@@ -7,11 +9,11 @@ const Input = ({
   handleMessageChange,
 }) => {
   const [state, handleSubmit] = useForm('mgebdpzj')
-  const formRef = useRef(null)
+  // const formRef = useRef(null)
 
   if (state.succeeded) {
-    return formRef.current.reset()
-    // <p className='text-textColor'>thanks-for-your-message</p>
+    // toast.success('Thanks for reaching out!')
+    // return formRef.current.reset()
   }
 
   return (
@@ -20,7 +22,7 @@ const Input = ({
         className='flex flex-col justify-start items-start'
         onSubmit={handleSubmit}
         method='POST'
-        ref={formRef}
+        // ref={formRef}
       >
         <div className='flex flex-col justify-center items-center gap-5 text-base pb-4'>
           <div className='flex flex-col justify-start items-start'>
