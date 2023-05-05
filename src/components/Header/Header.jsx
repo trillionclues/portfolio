@@ -72,10 +72,10 @@ const Header = () => {
                 }}
               >
                 <li
-                  className={`border-b border-b-[#fea55f] border-b-outline border-b-0
-                md:border-b-1 list-none no-underline border-0 md:border-l md:border-l-outline py-3 md:py-[6px] pr-5 pl-5 cursor-pointer text-textColor hover:text-slate-200
+                  className={`border-b border-b-outline border-b-outline border-b-0
+                md:border-b-1 list-none no-underline border-0 md:border-l md:border-b-[#fea55f] md:border-l-outline py-3 md:py-[6px] pr-5 pl-5 cursor-pointer text-textColor hover:text-slate-200
                 hover:bg-outline transition-all duration-300 text-lg lg:text-sm
-                md:relative absolute top-[2rem] md:top-0 top-[1.5rem] right-0 bg-primary mt-8 md:mt-0
+                md:relative absolute top-[2rem] md:top-0 top-[1.5rem] right-0 bg-primary mt-8 md:mt-0 z-10
                   ${!isOpen ? 'bg-primary hidden sm:block' : 'block w-full'}
                   ${
                     isActive('/contact-me')

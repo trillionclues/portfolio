@@ -1,5 +1,6 @@
 import { BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs'
 import arrowDown from '/icons/arrow-down.svg'
+import arrowSide from '/icons/arrow.svg'
 import reactImg from '/icons/techs/react.svg'
 import cssImg from '/icons/techs/css.svg'
 import htmlImg from '/icons/techs/html.svg'
@@ -92,6 +93,7 @@ export const developer = [
         contacts: {
           title: 'Contacts',
           icon: arrowDown,
+          icon2: arrowSide,
           sources: {
             email: 'exceln646@gmail.com',
             phone: '+2349032942903',
@@ -122,31 +124,29 @@ export const developer = [
           },
         ],
 
-        'find-me-also-in': [
+        findMeIn: [
           {
             title: 'Find-me-also-in',
             sources: [
               {
-                youtube: {
-                  title: 'YouTube channel',
-                  url: 'https://www.youtube.com/',
-                  user: 'username',
-                },
-                gurushots: {
-                  title: 'GuruShots profile',
-                  url: 'https://gurushots.com/',
-                  user: 'username',
-                },
-                instagram: {
-                  title: 'Instagram account',
-                  url: 'https://instagram.com/',
-                  user: 'username',
-                },
-                twitch: {
-                  title: 'Twitch profile',
-                  url: 'https://twitch.com/',
-                  user: 'username',
-                },
+                title: 'Medium page',
+                url: 'https://trillionclues.medium.com/',
+                user: 'trillionclues',
+              },
+              {
+                title: 'LinkedIn profile',
+                url: 'https://www.linkedin.com/in/trillionclues-excel/',
+                user: 'Excel Nwachukwu',
+              },
+              {
+                title: 'Instagram account',
+                url: 'https://instagram.com/trillion_clues',
+                user: 'trillionclues',
+              },
+              {
+                title: 'Twitter handle',
+                url: 'https://twitter.com/trillionclues',
+                user: 'trillionclues',
               },
             ],
           },
@@ -172,7 +172,7 @@ export const developer = [
         filledIcon: filledNode,
       },
       {
-        title: '_bizboom-commerce',
+        title: '_biz-commerce',
         description: 'NextJS ecommerce app with stripe integration and sanity.',
         img: '/images/projects/ecommerce-wtih-nextjs.png',
         tech: ['NextJS', 'all'],
@@ -181,8 +181,9 @@ export const developer = [
         filledIcon: filledNext,
       },
       {
-        title: '_web3-scrambler',
-        description: 'HTML5 implementation of drag-drop events and auth',
+        title: '_web3-scramble',
+        description:
+          'HTML5 implementation of drag-drop events and authentication',
         img: '/images/projects/drag-drop-scramble-crypto-game.png',
         tech: ['JavaScript', 'all'],
         url: 'https://github.com/trillionclues/web3-drag-drop-game',
@@ -201,8 +202,7 @@ export const developer = [
       },
       {
         title: '_phonie-isp',
-        description:
-          'Hackerthon project that detects telecoms carrier for numbers using Nigeria ISP network ',
+        description: 'App to detect phone numbers and their ISP network ',
         img: '/images/projects/Isp-detector.png',
         tech: ['JS', 'Html', 'Css', 'all'],
         url: 'https://github.com/trillionclues/phonie-app',
@@ -229,7 +229,7 @@ export const developer = [
         filledIcon: filledReact,
       },
       {
-        title: '_travelo-bookings',
+        title: '_trav-bookings',
         description:
           'Travel booking website landing page using React to filter and map items on request.',
         img: '/images/projects/travel-booking-landing-page.png',
