@@ -5,7 +5,7 @@ import emailImg from '/icons/email.svg'
 
 const Contact = () => {
   return (
-    <div className='border-t border-t-outline'>
+    <div className='border-t border-t-outline hidden md:block'>
       {developer.map((item, index) => {
         const { contact } = item
         // console.log(contact[0].contacts)

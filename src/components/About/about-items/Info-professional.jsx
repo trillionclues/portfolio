@@ -5,7 +5,11 @@ import Menu1 from './Professional/Menu1'
 import Menu2 from './Professional/Menu2'
 import Menu3 from './Professional/Menu3'
 
-export const Info_professional = () => {
+// mobile toggle images
+import arrowDown from '/icons/arrow-down.svg'
+import arrowSide from '/icons/arrow.svg'
+
+export const Info_professional = ({ mobilePro, setMobilePro }) => {
   const [toggleExp, setToggleExp] = useState(true)
   const [hardSkills, setHardSkills] = useState(true)
   const [softSkills, setSoftSkills] = useState(true)
@@ -18,48 +22,107 @@ export const Info_professional = () => {
           // console.log(about)
           return (
             <nav key={index}>
-              <div className='flex justify-start items-center py-2 border-b border-b-outline cursor-pointer px-2'>
-                <img src={about[0]['professional-info'].icon} />
-                <h4 className='pl-2 text-sm text-white tracking-wider'>
+              <div className='flex justify-start items-center py-2 border-b border-b-outline px-2'>
+                <img
+                  src={about[0]['professional-info'].icon}
+                  className='hidden md:inline-block'
+                />
+
+                <h4 className='pl-2 text-sm text-white tracking-wider hidden md:inline-block'>
                   {about[0]['professional-info'].title}
                 </h4>
+
+                {/* mobile render */}
+                <button
+                  className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'
+                  onClick={() => setMobilePro(!mobilePro)}
+                >
+                  {mobilePro ? (
+                    <img src={arrowDown} />
+                  ) : (
+                    <img src={arrowSide} />
+                  )}
+                  <h4 className='pl-2 text-sm text-white tracking-wider inline-block md:hidden'>
+                    {about[0]['professional-info'].title}
+                  </h4>
+                </button>
               </div>
               <ul className='pl-3 pb-2'>
                 {about[0]['professional-info'].info.map((item, index) => {
                   // console.log(item)
                   return (
-                    <div key={index}>
-                      <div
-                        className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setToggleExp(!toggleExp)}
-                      >
-                        <Menu1
-                          toggleExp={toggleExp}
-                          item={item}
-                          index={index}
-                        />
+                    <>
+                      <div key={index} className='hidden md:inline-block'>
+                        <div
+                          className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                          onClick={() => setToggleExp(!toggleExp)}
+                        >
+                          <Menu1
+                            toggleExp={toggleExp}
+                            item={item}
+                            index={index}
+                          />
+                        </div>
+
+                        <div
+                          className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                          onClick={() => setHardSkills(!hardSkills)}
+                        >
+                          <Menu2
+                            hardSkills={hardSkills}
+                            item={item}
+                            index={index}
+                          />
+                        </div>
+                        <div
+                          className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                          onClick={() => setSoftSkills(!softSkills)}
+                        >
+                          <Menu3
+                            softSkills={softSkills}
+                            item={item}
+                            index={index}
+                          />
+                        </div>
                       </div>
-                      <div
-                        className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setHardSkills(!hardSkills)}
-                      >
-                        <Menu2
-                          hardSkills={hardSkills}
-                          item={item}
-                          index={index}
-                        />
-                      </div>
-                      <div
-                        className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setSoftSkills(!softSkills)}
-                      >
-                        <Menu3
-                          softSkills={softSkills}
-                          item={item}
-                          index={index}
-                        />
-                      </div>
-                    </div>
+
+                      {/* conditional display on mobile */}
+                      {mobilePro && (
+                        <div key={index} className='inline-block md"hidden'>
+                          <div
+                            className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                            onClick={() => setToggleExp(!toggleExp)}
+                          >
+                            <Menu1
+                              toggleExp={toggleExp}
+                              item={item}
+                              index={index}
+                            />
+                          </div>
+
+                          <div
+                            className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                            onClick={() => setHardSkills(!hardSkills)}
+                          >
+                            <Menu2
+                              hardSkills={hardSkills}
+                              item={item}
+                              index={index}
+                            />
+                          </div>
+                          <div
+                            className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                            onClick={() => setSoftSkills(!softSkills)}
+                          >
+                            <Menu3
+                              softSkills={softSkills}
+                              item={item}
+                              index={index}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </>
                   )
                 })}
               </ul>

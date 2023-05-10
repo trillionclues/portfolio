@@ -4,7 +4,11 @@ import Contact from './Contact'
 import Menu1 from './Hobbies/Menu1'
 import Menu2 from './Hobbies/Menu2'
 
-export const Info_hobbies = () => {
+// mobile toggle images
+import arrowDown from '/icons/arrow-down.svg'
+import arrowSide from '/icons/arrow.svg'
+
+export const Info_hobbies = ({ setMobileHob, mobileHob }) => {
   const [sports, setSports] = useState(true)
   const [favorite, setFavorite] = useState(true)
 
@@ -15,31 +19,75 @@ export const Info_hobbies = () => {
         return (
           <nav key={index}>
             <div className='flex justify-start items-center py-2 border-b border-b-outline cursor-pointer px-3'>
-              <img src={about[0]['hobbies-info'].icon} />
-              <h3 className='pl-2 text-sm text-white tracking-wider'>
+              <img
+                src={about[0]['hobbies-info'].icon}
+                className='hidden md:inline-block'
+              />
+              <h3 className='pl-2 text-sm text-white tracking-wider hidden md:inline-block'>
                 {about[0]['hobbies-info'].title}
               </h3>
+
+              {/* mobile render */}
+              <button
+                className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'
+                onClick={() => setMobileHob(!mobileHob)}
+              >
+                {mobileHob ? <img src={arrowDown} /> : <img src={arrowSide} />}
+                <h3 className='pl-2 text-sm text-white tracking-wider inline-block md:hidden'>
+                  {about[0]['hobbies-info'].title}
+                </h3>
+              </button>
             </div>
             <ul className='pl-3 pb-2'>
               {about[0]['hobbies-info'].info.map((item, index) => {
                 // console.log(item)
                 return (
-                  <div>
-                    <div
-                      className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                      onClick={() => setSports(!sports)}
-                    >
-                      <Menu1 sports={sports} item={item} index={index} />
-                    </div>
-                    <div className='favGames'>
+                  <>
+                    <div className='hidden md:inline-block'>
                       <div
                         className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setFavorite(!favorite)}
+                        onClick={() => setSports(!sports)}
                       >
-                        <Menu2 favorite={favorite} item={item} index={index} />
+                        <Menu1 sports={sports} item={item} index={index} />
+                      </div>
+                      <div className='favGames'>
+                        <div
+                          className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                          onClick={() => setFavorite(!favorite)}
+                        >
+                          <Menu2
+                            favorite={favorite}
+                            item={item}
+                            index={index}
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
+
+                    {/* mobile render */}
+                    {mobileHob && (
+                      <div className='md:hidden inline-block'>
+                        <div
+                          className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                          onClick={() => setSports(!sports)}
+                        >
+                          <Menu1 sports={sports} item={item} index={index} />
+                        </div>
+                        <div className='favGames'>
+                          <div
+                            className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
+                            onClick={() => setFavorite(!favorite)}
+                          >
+                            <Menu2
+                              favorite={favorite}
+                              item={item}
+                              index={index}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </>
                 )
               })}
             </ul>
