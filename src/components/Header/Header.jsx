@@ -30,7 +30,7 @@ const Header = () => {
           <nav key={index} className='flex justify-between items-center'>
             <NavLink to='/'>
               <li
-                className={`no-underline text-textColor list-none border-b-0 md:border-r md:border-r-outline py-4 md:py-[10px] md:py-3 px-5 pr-20 md:pr-10 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer lg:text-sm text-xl hover:text-slate-200 transition-all duration-300 hover:bg-outline
+                className={`no-underline text-textColor list-none border-b-0 md:border-r md:border-r-outline py-4 md:py-[10px] md:py-3 px-3 pr-20 md:pr-10 oxl:pr-[9.1rem] xl:pr-[6.6rem] cursor-pointer lg:text-sm text-xl hover:text-slate-200 transition-all duration-300 hover:bg-outline
                 ${isActive('/') ? 'border-b-2 border-b-[#fea55f]' : ''}
               `}
               >
@@ -54,7 +54,7 @@ const Header = () => {
               </div>
               <ul
                 className={`menu-toggle sm:flex sm-block relative flex-col sm:flex-row items-center list-none p-0 md:m-0 mt-10 text-sm text-textColor
-                ${isOpen ? 'z-10 bg-primary hidden' : 'block '}}
+                ${isOpen ? 'z-10 bg-primary hidden' : 'hidden '}}
                 `}
               >
                 <Nav_items

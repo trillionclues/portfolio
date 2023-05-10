@@ -1,31 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import arrowDown from '/icons/arrow-down.svg'
+import arrowSide from '/icons/arrow.svg'
 
-const Contacts = ({ title, icon, icon2, toggleSidebar, setToggleSidebar }) => {
+const Contacts = ({ title, toggleContact, setToggleContact }) => {
   // console.log(title)
   return (
     <>
-      <h1 className='w-full py-2.5 px-3 block md:hidden text-base'>
-        _contacts
-      </h1>
-      <div className='py-3 border-b border-b-outline px-5 text-sm flex flex-row items-center cursor-pointer'>
+      <h1 className='w-full py-3 pt-5 px-3 md:hidden text-base'>_contacts</h1>
+      <div className='py-3 border-0 md:border-b border-b-outline px-5 text-sm flex flex-row items-center bg-outline md:bg-primary'>
         <img
-          className='pr-2 hidden md:inline-block'
-          src={icon}
+          className='pr-2 md:inline-block hidden'
+          src={arrowDown}
           alt='arrow down'
         />
 
-        {/* <button
+        <button
           className='md:hidden inline-block flex flex-row justify-center items-center'
-          onClick={() => setToggleSidebar(!toggleSidebar)}
-          aria-label='toggle-sidebar'
+          onClick={() => setToggleContact(!toggleContact)}
         >
-          {toggleSidebar ? (
-            <img className='pr-2 inline-block' src={icon2} alt='arrow down' />
+          {toggleContact ? (
+            <img src={arrowDown} className='inline-block pr-2' alt='arrow' />
           ) : (
-            <img className='pr-2 inline-block' src={icon} alt='arrow side' />
+            <img src={arrowSide} className='inline-block pr-2' alt='arrow' />
           )}
-          <h1 className='inline-block md:hidden'>{title}</h1>
-        </button> */}
+          <h1 className='inline-block'>{title}</h1>
+        </button>
 
         <h1 className='hidden md:inline-block'>{title}</h1>
       </div>
