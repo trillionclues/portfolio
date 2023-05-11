@@ -5,13 +5,13 @@ import Gist_content from './Gists_content/Gist_content'
 
 const Gist = () => {
   const [gistData, setGistData] = useState([])
-  const [isLoading, setIsLoding] = useState(false)
+  const [isLoading, setIsLoding] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
       const data = await fetchGists()
       setGistData(data)
-      setIsLoding(true)
+      setIsLoding(false)
     }
     fetchData()
   }, [])

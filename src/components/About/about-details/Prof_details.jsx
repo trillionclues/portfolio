@@ -2,7 +2,7 @@ import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import Gist from '../Gist'
 
-const Prof_details = ({ mobilePro }) => {
+const Prof_details = ({ toggleExp }) => {
   return (
     <>
       <section className='md:w-[520px] h-full md:border-r md:border-r-outline text-textColor hidden md:inline-block'>
@@ -54,7 +54,7 @@ const Prof_details = ({ mobilePro }) => {
       </section>
 
       {/* conditional mobile render */}
-      {mobilePro && (
+      {toggleExp && (
         <section className='md:w-[520px] h-full md:border-r md:border-r-outline text-textColor inline-block md:hidden '>
           <header className='flex flex-row items-center justify-start py-2 border-b border-b-outline px-2 hidden'>
             <h4 className='pl-2 pr-8 text-sm text-textColor tracking-wider  cursor-pointer'>

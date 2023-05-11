@@ -14,11 +14,13 @@ export const Info_professional = ({
   setMobilePro,
   setMobileHob,
   setMobilePers,
+  toggleExp,
+  setToggleExp,
+  hardSkills,
+  setHardSkills,
+  softSkills,
+  setSoftSkills,
 }) => {
-  const [toggleExp, setToggleExp] = useState(true)
-  const [hardSkills, setHardSkills] = useState(true)
-  const [softSkills, setSoftSkills] = useState(true)
-
   return (
     <section className='md:w-[240px] xl:w-[231px] oxl:w-[250px] md:border-r md:border-r-outline'>
       <div>
@@ -97,7 +99,7 @@ export const Info_professional = ({
 
                       {/* conditional display on mobile */}
                       {mobilePro && (
-                        <div key={index} className='inline-block md"hidden'>
+                        <div key={index} className='inline-block md:hidden'>
                           <div
                             className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
                             onClick={() => setToggleExp(!toggleExp)}

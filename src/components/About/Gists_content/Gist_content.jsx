@@ -4,7 +4,7 @@ import Loading from '../../../routes/Loading'
 const Gist_content = ({ gist, isLoading }) => {
   return (
     <section className='flex flex-col'>
-      {!isLoading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <div className='flex flex-row justify-between items-center pb-6 code-block'>
