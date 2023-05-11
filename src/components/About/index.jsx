@@ -1,21 +1,10 @@
 import React, { useState } from 'react'
 import { sections } from '../../../utils/sections'
 import { TabItems } from '../../../utils/sections'
-import Hob_details from './about-details/Hob_details'
-import Pers_details from './about-details/Pers_details'
-import Prof_details from './about-details/Prof_details'
-import { Info_hobbies } from './about-items/Info-hobbies'
-import { Info_personal } from './about-items/Info-personal'
-import { Info_professional } from './about-items/Info-professional'
-import Gist from './Gist'
+import MobileIndex from './MobileIndex'
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState(sections[0].id)
-
-  // mobile toggle states
-  const [mobilePro, setMobilePro] = useState(false)
-  const [mobilePers, setMobilePers] = useState(false)
-  const [mobileHob, setMobileHob] = useState(false)
 
   // handle tab click
   function handleTabClick(tabId) {
@@ -61,17 +50,9 @@ const Index = () => {
         <TabItems activeTab={activeTab} />
       </div>
 
-      <div className='flex md:flex-row flex-col '>
-        <Info_professional mobilePro={mobilePro} setMobilePro={setMobilePro} />
-        <Prof_details mobilePro={mobilePro} />
-      </div>
-      <div className='flex md:flex-row flex-col '>
-        <Info_personal mobilePers={mobilePers} setMobilePers={setMobilePers} />
-        <Pers_details mobilePers={mobilePers} />
-      </div>
-      <div className='flex md:flex-row flex-col '>
-        <Info_hobbies mobileHob={mobileHob} setMobileHob={setMobileHob} />
-        <Hob_details mobileHob={mobileHob} />
+      {/* mobile index */}
+      <div className='h-full'>
+        <MobileIndex />
       </div>
     </>
   )

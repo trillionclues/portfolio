@@ -8,7 +8,12 @@ import Menu2 from './Hobbies/Menu2'
 import arrowDown from '/icons/arrow-down.svg'
 import arrowSide from '/icons/arrow.svg'
 
-export const Info_hobbies = ({ setMobileHob, mobileHob }) => {
+export const Info_hobbies = ({
+  setMobileHob,
+  setMobilePro,
+  setMobilePers,
+  mobileHob,
+}) => {
   const [sports, setSports] = useState(true)
   const [favorite, setFavorite] = useState(true)
 
@@ -18,7 +23,14 @@ export const Info_hobbies = ({ setMobileHob, mobileHob }) => {
         const { about } = dev
         return (
           <nav key={index}>
-            <div className='flex justify-start items-center py-2 border-b border-b-outline cursor-pointer px-3'>
+            <div
+              className='border-0 flex justify-start items-center py-2.5 md:py-2 md:border-b border-b-outline cursor-pointer px-5 md:px-2 bg-outline md:bg-primary'
+              onClick={() => {
+                setMobileHob(!mobileHob)
+                setMobilePers(false)
+                setMobilePro(false)
+              }}
+            >
               <img
                 src={about[0]['hobbies-info'].icon}
                 className='hidden md:inline-block'
@@ -28,10 +40,7 @@ export const Info_hobbies = ({ setMobileHob, mobileHob }) => {
               </h3>
 
               {/* mobile render */}
-              <button
-                className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'
-                onClick={() => setMobileHob(!mobileHob)}
-              >
+              <button className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'>
                 {mobileHob ? <img src={arrowDown} /> : <img src={arrowSide} />}
                 <h3 className='pl-2 text-sm text-white tracking-wider inline-block md:hidden'>
                   {about[0]['hobbies-info'].title}

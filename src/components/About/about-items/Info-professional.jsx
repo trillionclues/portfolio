@@ -9,7 +9,12 @@ import Menu3 from './Professional/Menu3'
 import arrowDown from '/icons/arrow-down.svg'
 import arrowSide from '/icons/arrow.svg'
 
-export const Info_professional = ({ mobilePro, setMobilePro }) => {
+export const Info_professional = ({
+  mobilePro,
+  setMobilePro,
+  setMobileHob,
+  setMobilePers,
+}) => {
   const [toggleExp, setToggleExp] = useState(true)
   const [hardSkills, setHardSkills] = useState(true)
   const [softSkills, setSoftSkills] = useState(true)
@@ -22,7 +27,14 @@ export const Info_professional = ({ mobilePro, setMobilePro }) => {
           // console.log(about)
           return (
             <nav key={index}>
-              <div className='flex justify-start items-center py-2 border-b border-b-outline px-2'>
+              <div
+                className='border-0 flex justify-start items-center py-2.5 md:py-2 md:border-b border-b-outline px-5 md:px-2 bg-outline md:bg-primary'
+                onClick={() => {
+                  setMobilePro(!mobilePro)
+                  setMobileHob(false)
+                  setMobilePers(false)
+                }}
+              >
                 <img
                   src={about[0]['professional-info'].icon}
                   className='hidden md:inline-block'
@@ -33,16 +45,13 @@ export const Info_professional = ({ mobilePro, setMobilePro }) => {
                 </h4>
 
                 {/* mobile render */}
-                <button
-                  className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'
-                  onClick={() => setMobilePro(!mobilePro)}
-                >
+                <button className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'>
                   {mobilePro ? (
                     <img src={arrowDown} />
                   ) : (
                     <img src={arrowSide} />
                   )}
-                  <h4 className='pl-2 text-sm text-white tracking-wider inline-block md:hidden'>
+                  <h4 className='pl-2 text-[14px] text-white tracking-wider inline-block md:hidden'>
                     {about[0]['professional-info'].title}
                   </h4>
                 </button>
@@ -52,7 +61,7 @@ export const Info_professional = ({ mobilePro, setMobilePro }) => {
                   // console.log(item)
                   return (
                     <>
-                      <div key={index} className='hidden md:inline-block'>
+                      <div className='hidden md:inline-block'>
                         <div
                           className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
                           onClick={() => setToggleExp(!toggleExp)}

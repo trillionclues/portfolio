@@ -14,7 +14,7 @@ const Sidebar = () => {
           <h1 className='w-full py-2.5 px-3 block md:hidden text-base'>
             _projects
           </h1>
-          <div className='aside-item bg-outline md:bg-primary bg-outline md:bg-primary'>
+          <div className='aside-item bg-outline md:bg-primary '>
             <div className='border-0 md:border-b border-b-outline aside-item-input flex flex-row justify-start items-center md:py-2.5 py-2.5 px-3 pb-0'>
               <img
                 src={arrowDown}

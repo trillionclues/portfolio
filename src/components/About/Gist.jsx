@@ -18,10 +18,13 @@ const Gist = () => {
   // console.log(gistData)
 
   return (
-    <section className='w-5/12 overflow-y-scroll h-full overflow-clip flex pr-12 px-2 mt-[2rem] border-t-outline'>
-      <div className='flex flex-col px-3'>
-        <p className='text-textColor text-base'> // Code snippet showcase:</p>
-        <div className='flex flex-col py-3'>
+    <section className='md:w-5/12 overflow-y-scroll h-full overflow-clip flex pr-1 pl-1 md:pl-0 md:pr-12 px-0 md:px-2 mt-[2rem] border-t-outline w-full justify-center'>
+      <div className='flex flex-col px-3 w-full md:w-auto'>
+        <p className='text-white md:text-textColor text-base pb-5 md:pb-0'>
+          {' '}
+          // Code snippet showcase:
+        </p>
+        <div className='flex flex-col py-0 md:py-3 w-full'>
           {gistData.map((gist, idx) => {
             // console.log(gist)
             return (

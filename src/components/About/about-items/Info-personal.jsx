@@ -9,7 +9,12 @@ import Menu3 from './Personal/Menu3'
 import arrowDown from '/icons/arrow-down.svg'
 import arrowSide from '/icons/arrow.svg'
 
-export const Info_personal = ({ setMobilePers, mobilePers }) => {
+export const Info_personal = ({
+  setMobilePers,
+  setMobileHob,
+  setMobilePro,
+  mobilePers,
+}) => {
   const [toggleBio, setToggleBio] = useState(true)
   const [interest, setInterest] = useState(true)
   const [education, setEducation] = useState(true)
@@ -21,7 +26,14 @@ export const Info_personal = ({ setMobilePers, mobilePers }) => {
 
         return (
           <nav key={index}>
-            <div className='flex justify-start items-center py-2 border-b border-b-outline cursor-pointer px-3'>
+            <div
+              className='border-0 flex justify-start items-center py-2.5 md:py-2 md:border-b border-b-outline cursor-pointer px-5 md:px-2 bg-outline md:bg-primary'
+              onClick={() => {
+                setMobilePers(!mobilePers)
+                setMobileHob(false)
+                setMobilePro(false)
+              }}
+            >
               <img
                 src={about[0]['personal-info'].icon}
                 className='hidden md:inline-block'
@@ -31,12 +43,9 @@ export const Info_personal = ({ setMobilePers, mobilePers }) => {
               </h3>
 
               {/* mobile render */}
-              <button
-                className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'
-                onClick={() => setMobilePers(!mobilePers)}
-              >
+              <button className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'>
                 {mobilePers ? <img src={arrowDown} /> : <img src={arrowSide} />}
-                <h3 className='pl-2 text-sm text-white tracking-wider inline-block md:hidden'>
+                <h3 className='pl-2 text-[14px] text-white tracking-wider inline-block md:hidden'>
                   {about[0]['personal-info'].title}
                 </h3>
               </button>
@@ -46,7 +55,7 @@ export const Info_personal = ({ setMobilePers, mobilePers }) => {
                 // console.log(item)
                 return (
                   <>
-                    <div key={index} className='md:inline-block hidden'>
+                    <div className='md:inline-block hidden'>
                       <div
                         className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
                         onClick={() => setToggleBio(!toggleBio)}

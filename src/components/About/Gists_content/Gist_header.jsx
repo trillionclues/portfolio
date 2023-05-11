@@ -12,7 +12,7 @@ const Gist_header = ({ gist }) => {
           className='w-8 h-8 rounded-full'
         />
         <div className='flex flex-col pl-2'>
-          <p className='text-textColor text-sm'>
+          <p className='md:text-textColor text-span3 text-sm'>
             <a href={gist.url}>@{gist.owner.login}</a>
           </p>
           <p className='text-textColor text-sm'>Created at</p>
@@ -25,7 +25,7 @@ const Gist_header = ({ gist }) => {
             <span>details</span>
           </span>
         </p>
-        <p className='text-textColor text-sm pl-3'>
+        <p className='text-textColor text-sm pl-3 md:inline-block hidden'>
           <span className='flex flex-row cursor-pointer'>
             <img src={starImg} alt='starred' />
             <span>starred</span>
