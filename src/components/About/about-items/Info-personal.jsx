@@ -16,8 +16,8 @@ export const Info_personal = ({
   mobilePers,
 }) => {
   const [toggleBio, setToggleBio] = useState(true)
-  const [interest, setInterest] = useState(true)
-  const [education, setEducation] = useState(true)
+  const [interest, setInterest] = useState(false)
+  const [education, setEducation] = useState(false)
 
   return (
     <section className='md:w-[240px]  xl:w-[231px] oxl:w-[250px] md:border-r md:border-r-outline'>

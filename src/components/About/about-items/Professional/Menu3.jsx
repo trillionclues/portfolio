@@ -10,17 +10,17 @@ const Menu3 = ({ softSkills, item, index }) => {
     <div className='text-base'>
       {softSkills ? (
         <div className='flex flex-row justify-center items-center text-center'>
-          <MdOutlineKeyboardArrowRight />
+          <MdOutlineKeyboardArrowDown />
           <img className='pr-2 pl-2' src={folder3} alt='' />
-          <li className='text-sm pl-2 text-textColor' key={index}>
+          <li className='text-sm pl-2' key={index}>
             {item.softSkills.title}
           </li>
         </div>
       ) : (
         <div className='flex flex-row justify-center items-center text-center'>
-          <MdOutlineKeyboardArrowDown />
+          <MdOutlineKeyboardArrowRight />
           <img className='pr-2 pl-2' src={folder3} alt='' />
-          <li className='text-sm pl-2' key={index}>
+          <li className='text-sm pl-2 text-textColor' key={index}>
             {item.softSkills.title}
           </li>
         </div>

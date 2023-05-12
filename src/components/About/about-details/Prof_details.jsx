@@ -53,7 +53,7 @@ const Prof_details = ({ toggleExp }) => {
         </div>
       </section>
 
-      {/* conditional mobile render */}
+      {/* conditional mobile render
       {toggleExp && (
         <section className='md:w-[520px] h-full md:border-r md:border-r-outline text-textColor inline-block md:hidden '>
           <header className='flex flex-row items-center justify-start py-2 border-b border-b-outline px-2 hidden'>
@@ -82,7 +82,7 @@ const Prof_details = ({ toggleExp }) => {
           </div>
           <Gist />
         </section>
-      )}
+      )} */}
     </>
   )
 }

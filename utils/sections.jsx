@@ -4,6 +4,9 @@ import { Info_hobbies } from '../src/components/About/about-items/Info-hobbies'
 import Pers_details from '../src/components/About/about-details/Pers_details'
 import Prof_details from '../src/components/About/about-details/Prof_details'
 import Hob_details from '../src/components/About/about-details/Hob_details'
+import { Experience } from '../src/components/About/about-details/ProfSubMenu/Experience'
+import { HardSkills } from '../src/components/About/about-details/ProfSubMenu/HardSkills'
+import { SoftSkills } from '../src/components/About/about-details/ProfSubMenu/SoftSkills'
 import Gist from '../src/components/About/Gist'
 
 // icons
@@ -23,12 +26,32 @@ export const sections = [
 ]
 
 // check for activeTab
-export function TabItems({ activeTab }) {
+export function TabItems({
+  activeTab,
+  toggleExp,
+  setToggleExp,
+  hardSkills,
+  setHardSkills,
+  softSkills,
+  setSoftSkills,
+}) {
   if (activeTab === 1) {
     return (
       <div className='flex md:flex-row flex-col'>
-        <Info_professional />
-        <Prof_details />
+        <Info_professional
+          toggleExp={toggleExp}
+          setToggleExp={setToggleExp}
+          hardSkills={hardSkills}
+          setHardSkills={setHardSkills}
+          softSkills={softSkills}
+          setSoftSkills={setSoftSkills}
+        />
+        {/* <Prof_details /> */}
+        {/* desktop toggle */}
+        {toggleExp && <Experience toggleExp={toggleExp} />}
+        {hardSkills && <HardSkills hardSkills={hardSkills} />}
+        {softSkills && <SoftSkills softSkills={softSkills} />}
+
         <Gist />
       </div>
     )

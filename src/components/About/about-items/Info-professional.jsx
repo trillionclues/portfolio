@@ -66,7 +66,11 @@ export const Info_professional = ({
                       <div className='hidden md:inline-block'>
                         <div
                           className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                          onClick={() => setToggleExp(!toggleExp)}
+                          onClick={() => {
+                            setToggleExp(!toggleExp)
+                            setHardSkills(false)
+                            setSoftSkills(false)
+                          }}
                         >
                           <Menu1
                             toggleExp={toggleExp}
@@ -77,7 +81,11 @@ export const Info_professional = ({
 
                         <div
                           className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                          onClick={() => setHardSkills(!hardSkills)}
+                          onClick={() => {
+                            setHardSkills(!hardSkills)
+                            setToggleExp(false)
+                            setSoftSkills(false)
+                          }}
                         >
                           <Menu2
                             hardSkills={hardSkills}
@@ -87,7 +95,11 @@ export const Info_professional = ({
                         </div>
                         <div
                           className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                          onClick={() => setSoftSkills(!softSkills)}
+                          onClick={() => {
+                            setSoftSkills(!softSkills)
+                            setHardSkills(false)
+                            setToggleExp(false)
+                          }}
                         >
                           <Menu3
                             softSkills={softSkills}
@@ -102,7 +114,11 @@ export const Info_professional = ({
                         <div key={index} className='inline-block md:hidden'>
                           <div
                             className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                            onClick={() => setToggleExp(!toggleExp)}
+                            onClick={() => {
+                              setToggleExp(!toggleExp)
+                              setHardSkills(false)
+                              setSoftSkills(false)
+                            }}
                           >
                             <Menu1
                               toggleExp={toggleExp}
@@ -113,7 +129,11 @@ export const Info_professional = ({
 
                           <div
                             className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                            onClick={() => setHardSkills(!hardSkills)}
+                            onClick={() => {
+                              setHardSkills(!hardSkills)
+                              setToggleExp(false)
+                              setSoftSkills(false)
+                            }}
                           >
                             <Menu2
                               hardSkills={hardSkills}
@@ -123,7 +143,11 @@ export const Info_professional = ({
                           </div>
                           <div
                             className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                            onClick={() => setSoftSkills(!softSkills)}
+                            onClick={() => {
+                              setSoftSkills(!softSkills)
+                              setHardSkills(false)
+                              setToggleExp(false)
+                            }}
                           >
                             <Menu3
                               softSkills={softSkills}

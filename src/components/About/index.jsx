@@ -6,6 +6,11 @@ import MobileIndex from './MobileIndex'
 const Index = () => {
   const [activeTab, setActiveTab] = useState(sections[0].id)
 
+  // toggle sub menu
+  const [toggleExp, setToggleExp] = useState(true)
+  const [hardSkills, setHardSkills] = useState(false)
+  const [softSkills, setSoftSkills] = useState(false)
+
   // handle tab click
   function handleTabClick(tabId) {
     setActiveTab(tabId)
@@ -47,12 +52,27 @@ const Index = () => {
             </div>
           ))}
         </div>
-        <TabItems activeTab={activeTab} />
+        <TabItems
+          activeTab={activeTab}
+          toggleExp={toggleExp}
+          setToggleExp={setToggleExp}
+          hardSkills={hardSkills}
+          setHardSkills={setHardSkills}
+          softSkills={softSkills}
+          setSoftSkills={setSoftSkills}
+        />
       </div>
 
-      {/* mobile index */}
+      {/* mobile */}
       <div className='h-full'>
-        <MobileIndex />
+        <MobileIndex
+          toggleExp={toggleExp}
+          setToggleExp={setToggleExp}
+          hardSkills={hardSkills}
+          setHardSkills={setHardSkills}
+          softSkills={softSkills}
+          setSoftSkills={setSoftSkills}
+        />
       </div>
     </>
   )

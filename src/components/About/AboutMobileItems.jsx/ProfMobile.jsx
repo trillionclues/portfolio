@@ -1,18 +1,22 @@
 import React, { useState } from 'react'
 import Prof_details from '../about-details/Prof_details'
 import { Info_professional } from '../about-items/Info-professional'
+import { Experience } from '../about-details/ProfSubMenu/Experience'
+import { HardSkills } from '../about-details/ProfSubMenu/HardSkills'
+import { SoftSkills } from '../about-details/ProfSubMenu/SoftSkills'
 
 const ProfMobile = ({
   mobilePro,
   setMobilePro,
   setMobileHob,
   setMobilePers,
+  toggleExp,
+  setToggleExp,
+  hardSkills,
+  setHardSkills,
+  softSkills,
+  setSoftSkills,
 }) => {
-  // toggle sub menu
-  const [toggleExp, setToggleExp] = useState(false)
-  const [hardSkills, setHardSkills] = useState(false)
-  const [softSkills, setSoftSkills] = useState(false)
-
   return (
     <>
       <div className='flex md:hidden flex-col h-full'>
@@ -28,7 +32,11 @@ const ProfMobile = ({
           softSkills={softSkills}
           setSoftSkills={setSoftSkills}
         />
-        <Prof_details toggleExp={toggleExp} />
+
+        {/* mobile toggle */}
+        {toggleExp && <Experience toggleExp={toggleExp} />}
+        {hardSkills && <HardSkills hardSkills={hardSkills} />}
+        {softSkills && <SoftSkills softSkills={softSkills} />}
       </div>
     </>
   )

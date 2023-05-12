@@ -3,7 +3,14 @@ import ProfMobile from './AboutMobileItems.jsx/ProfMobile'
 import PersMobile from './AboutMobileItems.jsx/PersMobile'
 import HobMobile from './AboutMobileItems.jsx/HobMobile'
 
-const MobileIndex = () => {
+const MobileIndex = ({
+  toggleExp,
+  setToggleExp,
+  hardSkills,
+  setHardSkills,
+  softSkills,
+  setSoftSkills,
+}) => {
   // mobile toggle states
   const [mobilePro, setMobilePro] = useState(true)
   const [mobilePers, setMobilePers] = useState(false)
@@ -16,6 +23,12 @@ const MobileIndex = () => {
         setMobilePro={setMobilePro}
         setMobilePers={setMobilePers}
         setMobileHob={setMobileHob}
+        toggleExp={toggleExp}
+        setToggleExp={setToggleExp}
+        hardSkills={hardSkills}
+        setHardSkills={setHardSkills}
+        softSkills={softSkills}
+        setSoftSkills={setSoftSkills}
       />
       <PersMobile
         mobilePers={mobilePers}
