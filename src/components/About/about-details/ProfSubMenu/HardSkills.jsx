@@ -14,41 +14,52 @@ export const HardSkills = ({ hardSkills }) => {
             </h4>
             <FaTimes className='text-sm cursor-pointer ' />
           </header>
-          <div
-            className='flex md:flex-col mt-6 mx-16'
-            // style={{ maxHeight: '480px', overflowY: 'auto' }}
-          >
+          <div className='flex md:flex-col mt-6 mx-16'>
             <div className='text-sm leading-7'>
               <p>
-                <span>1</span>
+                <span className='pr-2 font-bold'>1</span>
                 <span> /**</span>
               </p>
               <p>
-                <span>2</span>
-                <span> * As a front-end developer, Lorem ipsum</span>
+                <span className='pr-2 font-bold'>2</span>
+                <span className='font-bold text-base'> * Technical Skills</span>
+              </p>
+
+              <p>
+                <span className='pr-2 font-bold'>3</span>
+
+                <span>
+                  {' '}
+                  <span className='pr-2'>&#x2022;</span> I am proficient in
+                  building user-centric appliactions using React.js with
+                  TypeScript and Next.js, which are popular frameworks for
+                  building dynamic and responsive web applications.
+                </span>
               </p>
               <p>
-                <span>3</span>
-                <span> * dolor sit amet, consectetur adipiscing</span>
+                <span className='pr-2 font-bold'>4</span>
+
+                <span>
+                  {' '}
+                  <span className='pr-2'>&#x2022;</span> I also have experience
+                  working with SQl and NoSQL databases like MongoDB, Postgresql
+                  for enterprise level applications.
+                </span>
+              </p>
+
+              <p>
+                <span className='pr-2 font-bold'>5</span>
+                <span>
+                  {' '}
+                  <span className='pr-2'>&#x2022;</span> I am always eager to
+                  learn new technologies and stay up-to-date with the latest
+                  industry trends and best practices. Let's discuss how my
+                  skills can help bring your software development projects to
+                  life!
+                </span>
               </p>
               <p>
-                <span>4</span>
-                <span> * elit, sed do eiusmod tempor incididunt</span>
-              </p>
-              <p>
-                <span>5</span>
-                <span> * ut labore et dolore magna aliqua. Ut</span>
-              </p>
-              <p>
-                <span>6</span>
-                <span> * enim ad minim veniam, quis nostrud</span>
-              </p>
-              <p>
-                <span>7</span>
-                <span> * exercitation ullamco laboris nisi ut</span>
-              </p>
-              <p>
-                <span>8</span>
+                <span className='pr-2 font-bold'>6</span>
                 <span> **/ </span>
               </p>
             </div>
@@ -62,19 +73,21 @@ export const HardSkills = ({ hardSkills }) => {
           <div className='flex mt-5 flex-col justify-center items-start px-5'>
             <h4 className='mb-3 text-white text-sm'>
               // professional-info{' '}
-              <span className='text-textColor'>/ hard-skills</span>
+              <span className='text-textColor'>/ technical-skills</span>
             </h4>
             <div className='text-sm leading-7'>
               <p>
-                I have 5 years of experience in web development lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat officia deserunt mollit anim id est
-                laborum.
+                I am proficient in building user-centric appliactions using
+                React.js with TypeScript and Next.js, which are popular
+                frameworks for building dynamic and responsive web applications.
+                I also have experience working with SQl and NoSQL databases like
+                MongoDB, Postgresql for enterprise level applications. I am
+                always eager to learn new technologies and stay up-to-date with
+                the latest industry trends and best practices.
+                <span className='block py-2'>
+                  Let's discuss how my skills can help bring your software
+                  development projects to life!
+                </span>
               </p>
             </div>
           </div>

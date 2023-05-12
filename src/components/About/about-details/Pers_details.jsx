@@ -2,7 +2,7 @@ import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import Gist from '../Gist'
 
-const Pers_details = ({ mobilePers }) => {
+const Pers_details = () => {
   return (
     <>
       <section className='md:w-[520px] h-full md:border-r md:border-r-outline text-textColor hidden md:inline-block'>
@@ -52,32 +52,6 @@ const Pers_details = ({ mobilePers }) => {
           </div>
         </div>
       </section>
-
-      {/* mobile render */}
-
-      {mobilePers && (
-        <section className='md:w-[520px] h-full md:border-r md:border-r-outline text-textColor inline-block md:hidden'>
-          <div className='flex mt-5 flex-col justify-center items-start px-5'>
-            <h4 className='mb-3 text-white'>
-              // personal-info <span className='text-textColor'>/ bio</span>
-            </h4>
-            <div className='text-sm leading-7'>
-              <p>
-                I have 5 years of experience in web development lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat officia deserunt mollit anim id est
-                laborum.
-              </p>
-            </div>
-          </div>
-          <Gist />
-        </section>
-      )}
     </>
   )
 }

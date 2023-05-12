@@ -4,9 +4,17 @@ import { Info_hobbies } from '../src/components/About/about-items/Info-hobbies'
 import Pers_details from '../src/components/About/about-details/Pers_details'
 import Prof_details from '../src/components/About/about-details/Prof_details'
 import Hob_details from '../src/components/About/about-details/Hob_details'
+
+// tab1 submenu
 import { Experience } from '../src/components/About/about-details/ProfSubMenu/Experience'
 import { HardSkills } from '../src/components/About/about-details/ProfSubMenu/HardSkills'
 import { SoftSkills } from '../src/components/About/about-details/ProfSubMenu/SoftSkills'
+
+// tab2 submenu
+import { Bio } from '../src/components/About/about-details/PersSubMenu/Bio'
+import { Interests } from '../src/components/About/about-details/PersSubMenu/Interests'
+import { Education } from '../src/components/About/about-details/PersSubMenu/Education'
+
 import Gist from '../src/components/About/Gist'
 
 // icons
@@ -28,12 +36,22 @@ export const sections = [
 // check for activeTab
 export function TabItems({
   activeTab,
+
+  // tab1 toggle
   toggleExp,
   setToggleExp,
   hardSkills,
   setHardSkills,
   softSkills,
   setSoftSkills,
+
+  // tab2 toggle
+  toggleBio,
+  setToggleBio,
+  toggleInt,
+  setToggleInt,
+  toggleEdu,
+  setToggleEdu,
 }) {
   if (activeTab === 1) {
     return (
@@ -46,7 +64,7 @@ export function TabItems({
           softSkills={softSkills}
           setSoftSkills={setSoftSkills}
         />
-        {/* <Prof_details /> */}
+
         {/* desktop toggle */}
         {toggleExp && <Experience toggleExp={toggleExp} />}
         {hardSkills && <HardSkills hardSkills={hardSkills} />}
@@ -59,8 +77,18 @@ export function TabItems({
   if (activeTab === 2) {
     return (
       <div className='flex md:flex-row flex-col relative'>
-        <Info_personal />
-        <Pers_details />
+        <Info_personal
+          toggleBio={toggleBio}
+          setToggleBio={setToggleBio}
+          toggleInt={toggleInt}
+          setToggleInt={setToggleInt}
+          toggleEdu={toggleEdu}
+          setToggleEdu={setToggleEdu}
+        />
+        {/* mobile toggle */}
+        {toggleBio && <Bio toggleExp={toggleBio} />}
+        {toggleInt && <Interests hardSkills={toggleInt} />}
+        {toggleEdu && <Education softSkills={toggleEdu} />}
         <Gist />
       </div>
     )

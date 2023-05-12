@@ -6,10 +6,15 @@ import MobileIndex from './MobileIndex'
 const Index = () => {
   const [activeTab, setActiveTab] = useState(sections[0].id)
 
-  // toggle sub menu
+  // toggle Tab1 sub menu
   const [toggleExp, setToggleExp] = useState(true)
   const [hardSkills, setHardSkills] = useState(false)
   const [softSkills, setSoftSkills] = useState(false)
+
+  // toggle Tab2 sub menu
+  const [toggleBio, setToggleBio] = useState(true)
+  const [toggleInt, setToggleInt] = useState(false)
+  const [toggleEdu, setToggleEdu] = useState(false)
 
   // handle tab click
   function handleTabClick(tabId) {
@@ -54,12 +59,20 @@ const Index = () => {
         </div>
         <TabItems
           activeTab={activeTab}
+          // professional about states
           toggleExp={toggleExp}
           setToggleExp={setToggleExp}
           hardSkills={hardSkills}
           setHardSkills={setHardSkills}
           softSkills={softSkills}
           setSoftSkills={setSoftSkills}
+          // personal about states
+          toggleBio={toggleBio}
+          setToggleBio={setToggleBio}
+          toggleInt={toggleInt}
+          setToggleInt={setToggleInt}
+          toggleEdu={toggleEdu}
+          setToggleEdu={setToggleEdu}
         />
       </div>
 
@@ -72,6 +85,13 @@ const Index = () => {
           setHardSkills={setHardSkills}
           softSkills={softSkills}
           setSoftSkills={setSoftSkills}
+          // personal about states
+          toggleBio={toggleBio}
+          setToggleBio={setToggleBio}
+          toggleInt={toggleInt}
+          setToggleInt={setToggleInt}
+          toggleEdu={toggleEdu}
+          setToggleEdu={setToggleEdu}
         />
       </div>
     </>

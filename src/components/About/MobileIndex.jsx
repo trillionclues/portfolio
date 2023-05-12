@@ -10,6 +10,14 @@ const MobileIndex = ({
   setHardSkills,
   softSkills,
   setSoftSkills,
+
+  // tab2 mobile
+  toggleBio,
+  setToggleBio,
+  toggleInt,
+  setToggleInt,
+  toggleEdu,
+  setToggleEdu,
 }) => {
   // mobile toggle states
   const [mobilePro, setMobilePro] = useState(true)
@@ -35,6 +43,12 @@ const MobileIndex = ({
         setMobilePers={setMobilePers}
         setMobilePro={setMobilePro}
         setMobileHob={setMobileHob}
+        toggleBio={toggleBio}
+        setToggleBio={setToggleBio}
+        toggleInt={toggleInt}
+        setToggleInt={setToggleInt}
+        toggleEdu={toggleEdu}
+        setToggleEdu={setToggleEdu}
       />
       <HobMobile
         mobileHob={mobileHob}

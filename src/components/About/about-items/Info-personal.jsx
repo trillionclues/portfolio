@@ -14,10 +14,16 @@ export const Info_personal = ({
   setMobileHob,
   setMobilePro,
   mobilePers,
+  toggleBio,
+  setToggleBio,
+  toggleInt,
+  setToggleInt,
+  toggleEdu,
+  setToggleEdu,
 }) => {
-  const [toggleBio, setToggleBio] = useState(true)
-  const [interest, setInterest] = useState(false)
-  const [education, setEducation] = useState(false)
+  // const [toggleBio, setToggleBio] = useState(true)
+  // const [interest, setInterest] = useState(false)
+  // const [education, setEducation] = useState(false)
 
   return (
     <section className='md:w-[240px]  xl:w-[231px] oxl:w-[250px] md:border-r md:border-r-outline'>
@@ -43,7 +49,7 @@ export const Info_personal = ({
               </h3>
 
               {/* mobile render */}
-              <button className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'>
+              <button className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer '>
                 {mobilePers ? <img src={arrowDown} /> : <img src={arrowSide} />}
                 <h3 className='pl-2 text-[14px] text-white tracking-wider inline-block md:hidden'>
                   {about[0]['personal-info'].title}
@@ -58,7 +64,11 @@ export const Info_personal = ({
                     <div className='md:inline-block hidden'>
                       <div
                         className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                        onClick={() => setToggleBio(!toggleBio)}
+                        onClick={() => {
+                          setToggleBio(!toggleBio)
+                          setToggleInt(false)
+                          setToggleEdu(false)
+                        }}
                       >
                         <Menu1
                           toggleBio={toggleBio}
@@ -66,12 +76,28 @@ export const Info_personal = ({
                           item={item}
                         />
                       </div>
-                      <div>
-                        <Menu2 interest={interest} index={index} item={item} />
+                      <div
+                        onClick={() => {
+                          setToggleInt(!toggleInt)
+                          setToggleBio(false)
+                          setToggleEdu(false)
+                        }}
+                      >
+                        <Menu2
+                          toggleInt={toggleInt}
+                          index={index}
+                          item={item}
+                        />
                       </div>
-                      <div>
+                      <div
+                        onClick={() => {
+                          setToggleEdu(!toggleEdu)
+                          setToggleInt(false)
+                          setToggleBio(false)
+                        }}
+                      >
                         <Menu3
-                          education={education}
+                          toggleEdu={toggleEdu}
                           item={item}
                           index={index}
                         />
@@ -83,7 +109,11 @@ export const Info_personal = ({
                       <div key={index} className='inline-block md:hidden'>
                         <div
                           className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-                          onClick={() => setToggleBio(!toggleBio)}
+                          onClick={() => {
+                            setToggleBio(!toggleBio)
+                            setToggleInt(false)
+                            setToggleEdu(false)
+                          }}
                         >
                           <Menu1
                             toggleBio={toggleBio}
@@ -91,16 +121,28 @@ export const Info_personal = ({
                             item={item}
                           />
                         </div>
-                        <div>
+                        <div
+                          onClick={() => {
+                            setToggleInt(!toggleInt)
+                            setToggleBio(false)
+                            setToggleEdu(false)
+                          }}
+                        >
                           <Menu2
-                            interest={interest}
+                            toggleInt={toggleInt}
                             index={index}
                             item={item}
                           />
                         </div>
-                        <div>
+                        <div
+                          onClick={() => {
+                            setToggleEdu(!toggleEdu)
+                            setToggleInt(false)
+                            setToggleBio(false)
+                          }}
+                        >
                           <Menu3
-                            education={education}
+                            toggleEdu={toggleEdu}
                             item={item}
                             index={index}
                           />

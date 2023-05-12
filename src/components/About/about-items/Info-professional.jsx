@@ -46,7 +46,7 @@ export const Info_professional = ({
                   {about[0]['professional-info'].title}
                 </h4>
 
-                {/* mobile render */}
+                {/* mobile button toggle render */}
                 <button className='md:hidden inline-block flex flex-row justify-center items-center cursor-pointer'>
                   {mobilePro ? (
                     <img src={arrowDown} />
@@ -109,7 +109,7 @@ export const Info_professional = ({
                         </div>
                       </div>
 
-                      {/* conditional display on mobile */}
+                      {/* conditional display submenu on mobile */}
                       {mobilePro && (
                         <div key={index} className='inline-block md:hidden'>
                           <div

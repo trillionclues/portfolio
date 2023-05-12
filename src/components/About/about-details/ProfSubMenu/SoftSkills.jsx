@@ -20,44 +20,50 @@ export const SoftSkills = ({ softSkills }) => {
           >
             <div className='text-sm leading-7'>
               <p>
-                <span>1</span>
+                <span className='pr-2 font-bold'>1</span>
                 <span> /**</span>
               </p>
               <p>
-                <span>2</span>
-                <span> * I bring more than Lorem ipsum dolor sit</span>
+                <span className='pr-2 font-bold'>2</span>
+                <span className='font-bold text-base'> * Workplace Skills</span>
+              </p>
+
+              <p>
+                <span className='pr-2 font-bold'>3</span>
+
+                <span>
+                  {' '}
+                  <span className='pr-2'>&#x2022;</span> In addition to my
+                  technical expertise, I have excellent problem-solving skills,
+                  which allow me to identify and address complex technical
+                  issues efficiently and effectively.
+                </span>
               </p>
               <p>
-                <span>3</span>
-                <span> * amet, consectetur adipiscing elit, sed</span>
+                <span className='pr-2 font-bold'>4</span>
+
+                <span>
+                  {' '}
+                  <span className='pr-2'>&#x2022;</span> I am a strong
+                  communicator, able to explain technical concepts in a clear
+                  and concise manner. I am self-motivated and dedicated, always
+                  eager to learn and improve my skills to stay ahead of industry
+                  trends and best practices.
+                </span>
+              </p>
+
+              <p>
+                <span className='pr-2 font-bold'>5</span>
+                <span>
+                  {' '}
+                  <span className='pr-2'>&#x2022;</span> I am committed to
+                  delivering high-quality work and ensuring that projects are
+                  completed on time and to the satisfaction of all stakeholders.
+                </span>
               </p>
               <p>
-                <span>4</span>
-                <span> * do eiusmod tempor incididunt ut labore</span>
-              </p>
-              <p>
-                <span>5</span>
-                <span> * et dolore magna aliqua.</span>
-              </p>
-              <p>
-                <span>6</span>
-                <span> * </span>
-              </p>
-              <p>
-                <span>7</span>
-                <span> * Ut enim ad minim veniam, quis nostrud</span>
-              </p>
-              <p>
-                <span>8</span>
-                <span> * exercitation ullamco laboris nisi ut</span>
-              </p>
-              <p>
-                <span>9</span>
-                <span> * fugiat nulla pariatur.</span>
-              </p>
-              <p>
-                <span>10</span>
-                <span> */ </span>
+                <span className='pr-2 font-bold'>6</span>
+                <span> **/ </span>
               </p>
             </div>
           </div>
@@ -70,19 +76,19 @@ export const SoftSkills = ({ softSkills }) => {
           <div className='flex mt-5 flex-col justify-center items-start px-5'>
             <h4 className='mb-3 text-white text-sm'>
               // professional-info{' '}
-              <span className='text-textColor'>/ soft-skills</span>
+              <span className='text-textColor'>/ workplace-skills</span>
             </h4>
             <div className='text-sm leading-7'>
               <p>
-                I have 5 years of experience in web development lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat officia deserunt mollit anim id est
-                laborum.
+                In addition to my technical expertise, I have excellent
+                problem-solving skills, which allow me to identify and address
+                complex technical issues efficiently and effectively. I am a
+                strong communicator, able to explain technical concepts in a
+                clear and concise manner. I am self-motivated and dedicated,
+                always eager to learn and improve my skills to stay ahead of
+                industry trends and best practices. I am committed to delivering
+                high-quality work and ensuring that projects are completed on
+                time and to the satisfaction of all stakeholders.
               </p>
             </div>
           </div>

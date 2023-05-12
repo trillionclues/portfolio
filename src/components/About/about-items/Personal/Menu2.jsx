@@ -5,15 +5,12 @@ import {
 } from 'react-icons/md'
 import folder2 from '/icons/folder2.svg'
 
-const Menu2 = ({ interest, index, item }) => {
+const Menu2 = ({ toggleInt, index, item }) => {
   return (
-    <div
-      className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'
-      onClick={() => setInterest(!interest)}
-    >
-      {interest ? (
+    <div className='flex cursor-pointer text-center text-sm lowercase items-center py-2 px-2'>
+      {toggleInt ? (
         <div className='flex flex-row justify-center items-center text-center'>
-          <MdOutlineKeyboardArrowRight />
+          <MdOutlineKeyboardArrowDown />
           <img className='pr-2 pl-2' src={folder2} alt='' />
           <li className='text-sm pl-2 text-textColor' key={index}>
             {item.interests.title}
@@ -21,7 +18,7 @@ const Menu2 = ({ interest, index, item }) => {
         </div>
       ) : (
         <div className='flex flex-row justify-center items-center text-center'>
-          <MdOutlineKeyboardArrowDown />
+          <MdOutlineKeyboardArrowRight />
           <img className='pr-2 pl-2' src={folder2} alt='' />
           <li className='text-sm pl-2' key={index}>
             {item.interests.title}
