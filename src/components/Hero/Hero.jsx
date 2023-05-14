@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // import SnakeGame from '../SnakeGame/SnakeGame'
 
@@ -10,17 +11,15 @@ const Hero = () => {
       <div className='flex flex-col flex-start md:flex-row hero-content w-full md:pt-[100px]'>
         <section className='flex hero-item flex-col md:mr-12 mr-0 h-full'>
           <div className='justify-center items-center mb-11 md:mb-0 pt-14 md:pt-0'>
-            <p className='text-paraColor text-[20px] md:text-xl'>
-              Hi all. I am
-            </p>
+            <p className='text-paraColor text-[20px] md:text-xl'>Hi, I'm</p>
 
             <h1 className='leading-[70px] text-[55px] font-medium md:font-normal md:text-6xl text-paraColor'>
               Excel
             </h1>
-            <h1 className='leading-8 md:leading-none text-[55px] font-medium md:font-normal md:text-6xl text-paraColor'>
+            <h1 className='leading-8 md:leading-none text-[55px] font-medium md:font-normal md:text-6xl text-paraColor inline-block md:hidden'>
               Nwachukwu
             </h1>
-            <p className='leading-[60px] md:leading-none text-[22px] md:text-3xl md:mb-5 text-span2 md:text-devColor'>
+            <p className='leading-[60px] md:leading-none text-[22px] md:text-3xl md:mb-5 text-span1 md:text-devColor'>
               {' '}
               &gt; Frontend Developer
             </p>
@@ -32,9 +31,7 @@ const Hero = () => {
             <p className='text-comment text-sm md:block hidden'>
               // you can also see it on my github page
             </p>
-            <p className='text-comment text-sm'>
-              // find my profile on Github:
-            </p>
+
             <p>
               <span className='text-span1 text-sm pr-2'>const</span>
               <span className='text-span2 text-sm pr-2'>githublink</span>
@@ -42,7 +39,7 @@ const Hero = () => {
               <span className='text-span3 text-sm pr-2 '>
                 <a
                   className='
-                text-span3 hidden md:block no-underline md:underline md:underline-offset-4
+                text-span3 hidden md:block no-underline md:underline-offset-4
                 hover:text-span2
                 transition duration-500 ease-in-out'
                   href='https://github.com/trillionclues/'
@@ -63,6 +60,18 @@ const Hero = () => {
                   </a>
                 </p>
               </span>
+              <button
+                className='
+               block
+              hover:bg-transparent
+              transition duration-500 ease-in-out py-4 px-[50px] md:w-auto md:py-2 md:px-12 border-devColor border-2  text-white font-bold absolute
+              z-[999]
+              '
+              >
+                <Link className='text-lg' to='/contact-me'>
+                  Contact me!
+                </Link>
+              </button>
             </p>
           </div>
         </section>
