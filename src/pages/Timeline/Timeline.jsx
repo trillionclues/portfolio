@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import SnakeQuest from '../../components/SnakeQuest/SnakeQuest';
+import '../../components/SnakeQuest/snakequest.css';
 
 const Timeline = () => {
   return (
     <div className='h-screen'>
       <h1>timeline</h1>
+      {/* <SnakeQuest /> */}
       {/* <div class='text-center pt-5 pb-10'>
         <h4>-- My Timeline --</h4>
         <p>
@@ -90,7 +93,7 @@ const Timeline = () => {
         </div>
       </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default Timeline
+export default Timeline;

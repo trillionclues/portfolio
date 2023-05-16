@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Timeline from '../../pages/Timeline/Timeline';
+import SnakeQuest from '../SnakeQuest/SnakeQuest';
 
 // import SnakeGame from '../SnakeGame/SnakeGame'
 
 const Hero = () => {
   return (
-    <div className='relative'>
-      <div className='css-blurry-gradient-blue'></div>
-      <div className='css-blurry-gradient-green'></div>
+    <div className='relative overflow-y-hidden'>
+      {/* <div className='css-blurry-gradient-blue'></div>
+      <div className='css-blurry-gradient-green'></div> */}
       <div className='flex flex-col flex-start md:flex-row hero-content w-full md:pt-[100px]'>
         <section className='flex hero-item flex-col md:mr-12 mr-0 h-full'>
           <div className='justify-center items-center mb-11 md:mb-0 pt-14 md:pt-0'>
@@ -65,7 +67,7 @@ const Hero = () => {
                block
               hover:bg-transparent
               transition duration-500 ease-in-out py-4 px-[50px] md:w-auto md:py-2 md:px-12 border-devColor border-2  text-white font-bold absolute
-              z-[999]
+              z-[999] rounded-md
               '
               >
                 <Link className='text-lg' to='/contact-me'>
@@ -76,10 +78,12 @@ const Hero = () => {
           </div>
         </section>
         {/* <SnakeGame /> */}
-        <div className='hidden md:block h-full'>Game goes here...</div>
+        <div className='hidden md:block h-screen mt-10'>
+          <SnakeQuest />
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
